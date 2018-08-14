@@ -1,0 +1,114 @@
+.nav {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 748px;
+  max-height: 748px;
+  width: 100px;
+  z-index: 100;
+  font-family: 'Quicksand', sans-serif;
+  // border-right: 1px solid red;
+}
+
+.navTab { // controls tab width
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 123px;
+  width: 90px;
+
+  -webkit-transition: width 0.25s; /* Safari */
+  transition: width 0.25s;
+  transition-timing-function: ease-out;
+}
+.navTab.active, .navTab:hover {
+  width: 100px;
+}
+
+.navTabBg {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 2px 4px;
+  background-color: #3a676d;
+  border-radius: 0 6px 6px 0;
+}
+.navTabBg.active {
+  background-color: #408ba2;
+}
+
+
+
+.navBgMain {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  // padding: 2px 4px 2px 30px;
+  border-radius: 6px 10px 10px 6px;
+  background-color: #3d6d84;
+}
+.navBgMain.active {
+  background-color: #4897aa;
+}
+
+.navPatina {
+  height: 113px;
+  width: 50px;
+  background-image: url('../img/nav/navTabOFF.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.navPatina.active {
+  width: 60px;
+  background-image: url('../img/nav/navTabON.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.navContent {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3px;
+  width: 80px;
+  height: 88px;
+  // border: 1px solid white;
+}
+
+img.navIcon {
+  width: 56px;
+  height: 56px;
+  opacity: 0.65;
+}
+img.navIcon.active {
+  opacity: 1;
+}
+
+.navTitle {
+  color: white;
+  text-align: center;
+  width: 64px;
+  height: 20px;
+  margin-top: 0.75;
+  font-size: 0.8em;
+  font-weight: 700;
+  opacity: 0.65;
+}
+.navTitle.active{
+  opacity: 1;
+}

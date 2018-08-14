@@ -1,0 +1,53 @@
+<div class="appBox">
+
+  <div class="page">
+    <!-- background img -->
+    <div class="pageBg res-bg"></div>
+
+    <div class="pageContent">
+
+      <!-- TOP ROW  (template contains userFlag, pgTitle, toolbar)============ ---->
+      <div class="gRow topRow"
+        ng-include=" './states/partials/topRow.html' ">
+      </div>
+
+      <!-- STATE CONTENT -->
+      <div class="res-pageBody">
+
+        <div class="res-sect">
+          <div class="head">
+            <div class="resTitle">{{downloads.title}}</div>
+            <div class="resDesc">{{downloads.description}}</div>
+          </div>
+          <div class="body">
+            <div class="btn"
+              ng-repeat="item in downloads.items">
+              {{item.title}}
+            </div>
+          </div>
+        </div>
+
+        <div class="res-sect">
+          <div class="head">
+            <div class="resTitle">{{links.title}}</div>
+            <div class="resDesc">{{links.description}}</div>
+          </div>
+          <div class="body">
+            <div class="btn"
+              ng-repeat="item in links.items">
+              {{item.title}}
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- end .res-pageBody -->
+    </div> <!-- end .pgContent -->
+  </div> <!-- end .page -->
+
+  <!-- NAV -->
+  <div
+    class="nav"
+    ng-include=" './states/partials/nav.html' ">
+  </div>  <!-- end div.nav-->
+
+</div> <!-- end .appBox -->

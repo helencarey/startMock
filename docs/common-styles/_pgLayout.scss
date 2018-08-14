@@ -1,0 +1,165 @@
+a:link, a:visited, a:hover { // just in case
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+.appBox {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.page { // no flex
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $cBG;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+// PAGE BG ==========================================
+.bgBox {} // contains
+
+.pageBg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 748px;
+  width: 1024px;
+  z-index: 1;
+  // border: 1px solid red;
+}
+.menuBG { z-index: 2; }
+
+// PAGE CONTENT ==========================================
+.pageContent { // no flex
+  position: relative;
+  z-index: 5;
+}
+
+// temp styles ------------------------------
+.pageBody-temp {
+  position: relative;
+  // display: flex;
+  // flex-flow: row nowrap;
+  width: auto;
+  height: $rowH * 4;
+  margin-top: $rowH/4;
+  margin-left: $colW * 3;
+  margin-right: $colW * 2;
+  margin-bottom: $rowH;
+  z-index: 10;
+  color: $cTxtMain;
+  background-color: rgba(255,255,255,0.75);
+  padding: 3em;
+  // padding-top: 0;
+  // border: 1px solid red;
+
+
+  h2 {
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 3em;
+  }
+  h2:first-child {
+    margin-top: 0;
+  }
+
+
+
+  p {
+    display: block;
+    margin-top: 1em;
+    line-height: 1.5em;
+    // color: red;
+    // margin-top: 1em;
+  }
+}
+
+// PAGE GRID ==========================================
+.gRow {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: $rowH;
+  // border-bottom: 1px solid pink;
+}
+
+// Top Row -----------------------------------
+// holds userFlag, pgTitle, toolbar
+.topRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 86px; //navW - navTab border rad
+
+  .topRow-col {  // pg layout
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 33.33%;
+    // border: 1px solid red;
+  }
+}
+
+.pgTitle {
+  display: flex;
+  align-self: center;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #7AB5B8;
+  text-transform: uppercase;
+  text-align: center;
+  // border: 1px solid white;
+}
+
+.pgTitleBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  // border: 1px solid pink;
+}
+
+// Second Row -----------------------------------
+.secondRow { // holds promptBox and rateBtns
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-left: $colW * 3;
+  // border: 1px solid tan;
+}
+
+.promptBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  padding-bottom: 1em;
+  align-items: center;
+  width: $colW * 7;
+  //border-bottom: 2px solid white;
+
+  .promptText-menu {
+    color: $cTxtMain;
+    font-size: 2.5em;
+    line-height: 1em;
+  }
+
+  .promptText {
+    color: $cTxtMain;
+    font-size: 3.5em;
+    line-height: 1em;
+  }
+}
+
+
+// NAV ==========================================
+// nav styles are at common-styles/nav
+// nav area is h:100%, w:10%

@@ -1,0 +1,33 @@
+<div class="appBox">
+
+  <div class="page">
+
+    <div class="pageBg"></div>
+
+    <div class="pageContent">
+      <!-- TOP ROW  (contains userFlag, pgTitle, toolbar)============ ---->
+      <div class="gRow topRow"
+        ng-include=" './states/partials/topRow.html' ">
+      </div>
+
+      <div class="pageBody-temp">
+        <h2>Update Status:</h2>
+        <p>currently, Profiles is not a design priority</p>
+
+        <h2>User Flag:</h2>
+        <p>Will likely be unnecessary for the Profiles section. (user will probably only be able to write data inside of profile-specific input forms)</p>
+
+        <h2>Toolbar (photo, stop, help):</h2>
+        <p>Hopefully, n/a for this section.</p>
+      </div>
+
+
+    </div> <!-- end pgContent -->
+  </div> <!-- end .page -->
+
+  <div
+    class="nav"
+    ng-include=" './states/partials/nav.html' ">
+  </div>  <!-- end div.nav-->
+
+</div> <!-- end .appBox -->

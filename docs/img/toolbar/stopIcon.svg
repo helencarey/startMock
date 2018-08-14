@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <symbol id="a" data-name="anchorLine" viewBox="0 0 20.35 24.66">
+      <path d="M1.4,19.34C2,20.13,5,24,9.93,24.16c5.23.14,8.54-4.1,9.08-4.82" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+      <g>
+        <circle cx="10.2" cy="3" r="2.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+        <line x1="10.37" y1="5.5" x2="10.03" y2="23.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+        <line x1="5.7" y1="10.5" x2="14.7" y2="10.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 0.904534033733291px"/>
+        <g>
+          <line x1="0.5" y1="18.5" x2="3" y2="18.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+          <line x1="0.63" y1="21" x2="0.5" y2="18.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+          <line x1="19.85" y1="18.5" x2="17.35" y2="18.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+          <line x1="19.72" y1="21" x2="19.85" y2="18.5" style="fill: none;stroke: #7ab5b8;stroke-linecap: round;stroke-miterlimit: 10"/>
+        </g>
+      </g>
+    </symbol>
+  </defs>
+  <title>Artboard 11</title>
+  <use width="20.35" height="24.66" transform="translate(11.61 -2.92) rotate(23) scale(1.09)" xlink:href="#a"/>
+</svg>

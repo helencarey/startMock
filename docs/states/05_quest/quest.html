@@ -1,0 +1,49 @@
+<div class="appBox">
+
+  <div class="page">
+
+    <div class="bgBox">
+      <div class="pageBg bgNoBF" ng-if="questState > 0"></div>
+      <div class="pageBg menuBG" ng-if="menuState > 0"></div>
+    </div>
+
+    <div class="pageContent">
+
+      <!-- TOP ROW  (contains userFlag, pgTitle, toolbar)============ ---->
+      <div class="gRow topRow"
+        ng-include=" './states/partials/topRow.html' ">
+      </div>
+
+
+      <!-- SECOND ROW  (word prompt, rating btns)============ ---->
+      <div class="gRow secondRow">
+        <div class="promptBox">
+          <div class="promptText"> prompt text </div>
+        </div>
+
+        <div ng-if="rateBtns && !menu">
+          <div ng-include=" './states/partials/rateBtns.html' "></div>
+        </div>
+
+      </div>
+      <!-- END OF SECOND ROW ============ ---->
+      <div class="gRow"></div>
+
+      <div id="sandBank" class=""></div>
+
+    </div> <!-- end pgContent -->
+
+    <div id="qt-break" class="dialog"></div>
+    <div id="qt-stop" class="dialog"></div>
+    <div id="qt-results" class="dialog"></div>
+    <div id="qtBF-help" class="dialog"></div>
+    <div id="qtNoBF-help" class="dialog"></div>
+
+  </div> <!-- end .page -->
+
+  <div
+    class="nav"
+    ng-include=" './states/partials/nav.html' ">
+  </div>  <!-- end div.nav-->
+
+</div> <!-- end .appBox -->

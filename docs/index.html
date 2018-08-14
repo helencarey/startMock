@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>staRt mock</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
+  <link rel="stylesheet" href="css/webView.css">
+  <link rel="stylesheet" href="css/app_styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script> -->
+
+  <script src="./app_module.js"></script>
+  <script src="./app_controllers.js"></script>
+
+</head>
+
+<body ng-app="startMock">
+
+  <div id="webView">
+    <div id="appContainer">
+      <div id="statusBar"></div>
+      <div  id="appDisplay" ng-view>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

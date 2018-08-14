@@ -1,0 +1,29 @@
+.bgNoBF {
+  opacity: 1;
+  background-image: url("../img/bg/qtNoBF-bg.svg");
+  z-index: 1;
+}
+
+// profiles-bg?
+// tutorial -bg?
+
+.qtBF-bg {
+  opacity: 1;
+  background-image: url("../img/bg/qtBF-bg.svg");
+  z-index: 1;
+}
+.qtBF-mg {
+  opacity: 1;
+  background-image: url("../img/bg/qtBF-mg.svg");
+  z-index: 2;
+}
+.qtBF-fg {
+  opacity: 1;
+  background-image: url("../img/bg/qtBF-fg.svg");
+  z-index: 3;
+}
+
+.qtNoBF-bg {
+  opacity: 1;
+  background-image: url("../img/bg/qtNoBF-bg.svg");
+}

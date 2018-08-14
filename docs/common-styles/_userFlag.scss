@@ -1,0 +1,46 @@
+.flagBox {
+  position: relative;
+  height: 108px;
+  width: 126px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid red;
+}
+
+.userFlag {
+  background-image: url("../img/userFlag.svg");
+}
+
+.anonFlag {
+  background-image: url("../img/anonFlag.svg");
+}
+
+.initBox {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 107px;
+  width: 3.5em;
+  left: -5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.initials {
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  color: #DBA961;
+  // #C7B299; //#DBA961; // #7AB5B8; //#E5A265; //#3D6D84;
+  font-size: 2.25em;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.initFirst { top: -7px; left: 1px; }
+.initLast { top: 7px; left:-1px;}

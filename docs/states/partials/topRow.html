@@ -1,0 +1,26 @@
+<!--
+  parent:  div.pageContent div.topROw
+ -->
+
+<!-- USER FLAG ========================= -->
+<div class="topRow-col">
+  <div ng-if="userFlag"
+    class="{{ (authUser) ? 'flagBox userFlag' : 'flagBox anonFlag' }}">
+    <div ng-if="authUser" class="initBox" >
+      <div class="initials initFirst">{{authUser.firstName[0]}}</div>
+      <div class="initials initLast">{{authUser.lastName[0]}}</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE TITLE ========================= -->
+<div class="topRow-col">
+  <div id="" class="pgTitleBox">
+    <div class="pgTitle">{{pgTitle}}</div>
+  </div>
+</div>
+
+<!-- TOOLBAR ========================= -->
+<div class="topRow-col"
+  ng-include=" './states/partials/toolbar.html' ">
+</div>

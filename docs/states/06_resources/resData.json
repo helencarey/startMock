@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Downloads",
+    "description": "Download resources directly to your device as PDFs.",
+    "items": [
+      {
+        "title": "Pilot Study Guide",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "Clinician Checklist",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "staRt User Manual",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "Principal Letter",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "Parent Letter",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "SLP International Letter",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "Clinician Questionnaires",
+        "order": 0,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "title": "Links",
+    "description": "Open Google Forms in your device's browser.",
+    "items": [
+      {
+        "title": "Pilot Tester Survey",
+        "order": 0,
+        "url": "#"
+      },
+      {
+        "title": "Bug Report",
+        "order": 0,
+        "url": "#"
+      }
+    ]
+  }
+]

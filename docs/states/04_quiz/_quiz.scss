@@ -1,0 +1,130 @@
+.mastImg {
+  position: absolute;
+  top: $rowH;
+  // left: $colW * 1.8;
+  left: 160px;
+  width: 710px;
+  height: 95px;
+  background-image: url("../img/rope.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 6;
+  // border: 1px solid $cDebug;
+}
+
+.gRow {
+  // display: flex;
+  // flex-flow: row nowrap;
+  // width: 100%;
+  // height: $rowH;
+  // // border-bottom: 1px solid pink;
+}
+
+.qz-flagBox-layout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10px 8px 0 10px;
+  width: $colW * 7;
+  margin-left: $colW * 3;
+  // border: 1px solid pink;
+}
+
+.qz-flagBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 5;
+  // border: 1px solid orange;
+}
+
+// .qz-menuFlagBox {
+//   display: flex;
+//   flex-flow: row nowrap;
+//   justify-content: space-between;
+//   //border: 1px solid pink;
+// }
+
+.menuFlag {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 160px;
+  background-color: white;
+
+  color: $cDebug;
+  text-align: center;
+}
+.menuFlag.SyllQzFlag {}
+.menuFlag.SWQzFlag {
+  background-color: transparent;
+  background-image: url("../img/quiz/SWQz-flag.svg");
+  background-repeat: no-repeat;
+}
+.menuFlag.LWQzFlag {}
+
+
+// ===================================================
+.qz-syllFlagBox {
+  position: relative;
+  top: -18px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10;
+
+  // border: 1px solid yellow;
+
+  svg {
+    min-height: 84px;
+    min-width: 590px;
+  }
+}
+
+.qzScore {
+  position: absolute;
+  top: $rowH * 4.5;
+  left: $colW * 0.5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  width: 300px;
+  height: $rowH;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 15;
+
+  .qzScoreBox {
+    position: relative;
+    margin-left: $colW;
+    top: 0.5em;
+    height:auto;
+    width:auto;
+    padding: 1em;
+    border: 1px solid $cDebug;
+
+    p {
+      display: block;
+      color: $cDebug;
+      font-weight: 500;
+    }
+  }
+}
+
+// svg path.cls-1 { fill: #baddd9; }
+// svg path.cls-2 { fill: #dcf1ef; }
+// svg text.cls-3 {
+//   isolation: isolate;
+//   font-size: 18px;
+//   fill: #134767;
+//   font-family: Quicksand-Bold, Quicksand;
+//   font-weight: 700;
+// }
+//
+// svg path.gold { fill: #FFD576; }
+// svg path.silver { fill: #FFFFFF; }
+// svg path.bronze { fill: #F7C8A1; }

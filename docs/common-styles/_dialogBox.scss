@@ -1,0 +1,104 @@
+.dialogBox {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+  // top: $rowH;
+  top: $rowH * 7;
+  left: $colW * 4;
+  height: $rowH * 4;
+  width: $colW * 5;
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, .15);
+  z-index: 25;
+
+  -webkit-transition: top 0.15s; /* Safari */
+  transition: top 0.25s;
+  transition-timing-function: ease-in;
+  // border: 1px solid $cDebug;
+}
+
+.diaActive {
+  top: $rowH;
+}
+
+.diaHead {
+  display: flex;
+  flex-flow: column nowrap;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  width: 100%;
+  border: 1px solid $cPencil;
+
+  .dia-statusBar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    // border: 1px solid $cDebug;
+
+    .dia-close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      font-weight: 500;
+      width: 64px;
+      height: 54px;
+      border-top-right-radius: 25px;
+      border: 1px solid $cPencil;
+    }
+  }
+  .dia-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5em;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+}
+
+.diaBody {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 1em;
+  // height: 2.5em;
+  // font-size: 1.5em;
+  margin: 0.5em 0;
+  border: 1px solid $cPencil;
+}
+
+.diaInput {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5em;
+  padding: 1em;
+  border: 1px solid $cPencil;
+
+  button {
+    height: 100%;
+    min-width: 190px;
+  }
+}
+
+// .gRow {
+//   display: flex;
+//   flex-flow: row nowrap;
+//   width: 100%;
+//   height: $rowH;
+//   // border-bottom: 1px solid pink;
+// }

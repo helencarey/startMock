@@ -1,0 +1,27 @@
+<div ng-if="toolbar && !menu" class="toolBarTop">
+
+  <div ng-if="toolbar.menu"
+    ng-click="Menu()"
+    class="tbTab">
+      <img class="tbTab-icon" ng-src="{{ 'img/axes.svg'}}">
+      <div class="tbTab-txt">Menu</div>
+  </div>
+
+  <div ng-if="toolbar.photo" class="tbTab">
+    <img class="tbTab-icon" ng-src="{{ 'img/axes.svg'}}">
+    <div class="tbTab-txt">Photo</div>
+  </div>
+
+  <div ng-if="toolbar.stop" class="tbTab" ng-click="Stop()">
+    <img class="tbTab-icon"
+      ng-src="{{ 'img/toolbar/stopIcon.svg'}}">
+    <div class="tbTab-txt">Stop</div>
+  </div>
+
+  <div ng-if="toolbar.help" class="tbTab">
+    <img class="tbTab-icon"
+      ng-src="{{'img/toolbar/helpIcon.svg'}}">
+    <div class="tbTab-txt">Help</div>
+  </div>
+
+</div>

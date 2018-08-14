@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 125 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc95f;
+      }
+
+      .cls-2 {
+        fill: #ffd576;
+      }
+    </style>
+    <symbol id="goldOFF-2" data-name="goldOFF" viewBox="0 0 100.41 72">
+      <g>
+        <polygon class="cls-1" points="100.41 72 51.57 72 17.71 72 17.19 72 0 36 100.41 36 100.41 72"/>
+        <polygon class="cls-2" points="100.41 0 51.57 0 17.71 0 17.19 0 0 36 100.41 36 100.41 0"/>
+      </g>
+      <path class="cls-1" d="M32.41,12h68a0,0,0,0,1,0,0V61a0,0,0,0,1,0,0h-68a8,8,0,0,1-8-8V20A8,8,0,0,1,32.41,12Z"/>
+    </symbol>
+  </defs>
+  <title>goldOFF</title>
+  <g id="goldOFF">
+    <use width="100.41" height="72" transform="translate(24.59)" xlink:href="#goldOFF-2"/>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 691.87 79.41">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: #c7b299;
+        stroke-width: 3px;
+      }
+
+      .cls-4 {
+        fill: #c69c6d;
+      }
+
+      .cls-5 {
+        fill: #c7b299;
+      }
+    </style>
+  </defs>
+  <title>rod-rope</title>
+  <g>
+    <line id="rod" class="cls-1" x1="85.37" y1="4.75" x2="685.87" y2="4.25"/>
+    <circle class="cls-2" cx="687.37" cy="4.5" r="3.5"/>
+  </g>
+  <g>
+    <path id="rope" class="cls-3" d="M85.37,4.75a185.27,185.27,0,0,0,58,12s20.74.88,53.5-5.5a73.28,73.28,0,0,0,11-3,69.63,69.63,0,0,0,9-4c1.57,1,4,2.44,7,4,9.51,4.9,18.61,7.52,40.17,11.33,12.74,2.26,19.11,3.39,26.33,4.17,7.95.86,37.71,3.62,112-11,8.5-1.67,21.33-4.31,37-8,14.54,7.68,42.75,20,79,20a171.5,171.5,0,0,0,54-9,169.83,169.83,0,0,0,24.5-10.5,71,71,0,0,0,42.5,13.5,70.93,70.93,0,0,0,41-14"/>
+    <path id="rope-end" class="cls-3" d="M.87,44.25c3.54-8.21,9.57-18.46,19.8-23,7-3.11,12.7-2.09,18.9-2,10,.15,24.33-2.07,42.3-13-1.48,14.11-5.48,23.72-9,30-4,7.08-7.25,9.82-9.9,17-3.59,9.72-3,19.28-1.8,26"/>
+    <g>
+      <ellipse class="cls-4" cx="597.37" cy="5.25" rx="2" ry="4.5" transform="translate(263.65 500.74) rotate(-56.54)"/>
+      <ellipse class="cls-5" cx="598.37" cy="5.25" rx="2" ry="4.5" transform="translate(17.58 149.34) rotate(-14.44)"/>
+    </g>
+    <g>
+      <ellipse class="cls-4" cx="679.59" cy="4.35" rx="2.22" ry="4.5" transform="translate(32.35 211.59) rotate(-18.12)"/>
+      <ellipse class="cls-5" cx="678.59" cy="5.35" rx="2.22" ry="4.5" transform="translate(334.66 590.35) rotate(-60)"/>
+    </g>
+    <g>
+      <ellipse class="cls-4" cx="439.93" cy="5.11" rx="2.07" ry="4.5" transform="translate(298.72 421.79) rotate(-71.95)"/>
+      <ellipse class="cls-5" cx="441.93" cy="4.11" rx="2.07" ry="4.5" transform="translate(150.34 336.21) rotate(-49.25)"/>
+    </g>
+    <g>
+      <ellipse class="cls-4" cx="216.37" cy="4.75" rx="4.5" ry="1.5"/>
+      <ellipse class="cls-5" cx="215.37" cy="3.75" rx="4.5" ry="1.5" transform="translate(13.45 78.77) rotate(-21.38)"/>
+    </g>
+    <g>
+      <ellipse class="cls-4" cx="83.92" cy="5.4" rx="3.66" ry="2.06" transform="translate(12.41 49.65) rotate(-35.43)"/>
+      <ellipse class="cls-5" cx="82.87" cy="3.75" rx="3.5" ry="2" transform="translate(47.41 78.75) rotate(-67.29)"/>
+    </g>
+  </g>
+</svg>

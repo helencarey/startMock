@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "icon": "profilesIcon.svg",
+    "txt" : "Profiles",
+    "link": "profiles"
+  },
+  {
+    "id": 1,
+    "icon": "tutorialIcon.svg",
+    "txt" : "Tutorial",
+    "link": "tutorial"
+  },
+  {
+    "id": 2,
+    "icon": "freeIcon.svg",
+    "txt" : "Free Play",
+    "link": "freePlay"
+  },
+  {
+    "id": 3,
+    "icon": "quizIcon.svg",
+    "txt" : "Quiz",
+    "link": "quiz"
+  },
+  {
+    "id": 4,
+    "icon": "questIcon.svg",
+    "txt" : "Quest",
+    "link": "quest"
+  },
+  {
+    "id": 5,
+    "icon": "resourcesIcon.svg",
+    "txt" : "Resources",
+    "link": "resources"
+  }
+]

@@ -1,0 +1,109 @@
+<div class="appBox">
+
+  <div class="page">
+
+    <!-- BG IMAGES -->
+    <div class="pageBg qz-bg">
+      <div ng-if="syllQz" class="qz-syllCloud"></div>
+    </div>
+      <!-- ng-if="qzSW" ng-include=" './states/04_quiz/partials/qzSW-svg.html' " -->
+    <div ng-if="qzSW" class="qz-mg"
+      ng-include=" './states/04_quiz/partials/qzSW-svg.html' ">
+    </div>
+
+    <div class="pageBg qz-fg"></div>
+
+    <div class="pageContent">
+      <!-- TOP ROW  (contains userFlag, pgTitle, toolbar per controller settings)============ ---->
+      <div class="gRow topRow"
+        ng-include=" './states/partials/topRow.html' ">
+      </div>
+
+      <!-- SECOND ROW  (word prompt, rating btns)============ ---->
+      <div class="gRow secondRow">
+        <div class="mastImg"></div>
+        <div class="promptBox">
+          <div class="{{ (menu) ? 'promptText-menu' : 'promptText' }}">
+            {{promptText}}
+          </div>
+        </div>
+
+        <div ng-if="rateBtns && !menu">
+          <div ng-include=" './states/partials/rateBtns.html' "></div>
+        </div>
+      </div> <!-- end 2nd row -->
+
+      <!-- QUIZ ACTIVTY GRAPHICS ============ ---->
+      <div class="gRow qz-flagBox-layout">
+        <div ng-if="menu" class="qz-flagBox">
+          <div class="menuFlag" ng-click="startSyllQz()">
+            Syllable Quiz Btn
+          </div>
+          <div class="menuFlag SWQzFlag" ng-click="startSWQz()"></div>
+          <div class="menuFlag" ng-click="startLWQz()">
+            Word Quiz Btn
+          </div>
+        </div> <!-- end qz-menuFlagBox -->
+
+        <div ng-if="syllQz" class="qz-flagBox qz-syllFlagBox"
+          ng-include=" './states/04_quiz/partials/syllQzFlags.html' ">
+        </div>
+
+        <div ng-if="LWQz" class="qz-flagBox qz-LWQzFlagBox">
+          <div class="LWQzFlag">01</div>
+          <div class="LWQzFlag">02</div>
+          <div class="LWQzFlag">03</div>
+          <div class="LWQzFlag">04</div>
+          <div class="LWQzFlag">05</div>
+          <div class="LWQzFlag">06</div>
+          <div class="LWQzFlag">07</div>
+          <div class="LWQzFlag">08</div>
+          <div class="LWQzFlag">09</div>
+          <div class="LWQzFlag">10</div>
+        </div>
+
+      </div> <!-- end qz-flagBox  -->
+
+    </div> <!-- end pgContent -->
+
+    <div ng-if="!menu" class="qzScore">
+      <div class="qzScoreBox">
+        <p>DEBUG BOX</p>
+        <p>&nbsp;score: {{qzScore}}</p>
+        <p># correct/gold: {{gold}}</p>
+        <p># silver: {{silver}}</p>
+        <p># incorrect: {{bronze}}</p>
+      </div>
+    </div>
+
+    <!-- {{ (diaStop) ? 'dialogBox diaActive' : 'dialogBox' }}" -->
+    <div id="qz-stop" class="{{ (diaStop) ? 'dialogBox diaActive' : 'dialogBox' }}">
+
+      <div class="diaHead">
+        <div class="dia-statusBar">
+          <div class="dia-close" ng-click="closeStopDia();">X</div>
+        </div>
+        <div class="dia-title">Dialogbox Title</div>
+      </div>
+
+      <div class="dia-body"></div>
+
+      <div class="diaInput">
+        <button type="button" name="button">ok</button>
+        <button type="button" name="button">menu</button>
+      </div>
+
+    </div>
+
+    <div id="qz-results" class="dialog"></div>
+
+    <div id="qz-helpWord" class="dialog"></div>
+    <div id="qz-helpSyll" class="dialog"></div>
+  </div> <!-- end .page -->
+
+  <div
+    class="nav"
+    ng-include=" './states/partials/nav.html' ">
+  </div>  <!-- end div.nav-->
+
+</div> <!-- end .appBox -->
