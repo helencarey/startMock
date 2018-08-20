@@ -4,11 +4,13 @@
 // @import 'common-styles/aniBase';
 @import 'common-styles/pgLayout';
 
+
 // bg images
 @import 'common-styles/bgImgs';
 @import 'states/04_quiz/qz-bgImg';
-@import 'states/05_quest/qt-bgImg';
+// @import 'states/05_quest/qt-bgImg';
 @import 'states/06_resources/res-bgImg';
+
 
 // common page components
 @import 'common-styles/nav';
@@ -17,9 +19,11 @@
 // @import 'common-styles/promptBox';
 @import 'common-styles/rateBox';
 @import 'common-styles/dialogBox';
+@import 'common-styles/sandbank';
 
 
 // state-specific styles
 @import 'states/04_quiz/quiz';
 @import 'states/04_quiz/partials/syllQzFlags';
+@import 'states/05_quest/qt-coinStacks';
 @import 'states/06_resources/resources';

@@ -1,0 +1,75 @@
+.coinRow {
+  position: absolute;
+  top: $rowH * 4;
+  height: $rowH * 2;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  // border: 1px solid red;
+}
+
+.coinBox {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: $colW * 3;
+  margin-right: $colW * 2;
+  margin-top: $rowH * 0.5;
+  margin-bottom: $rowH * 0.5;
+  width: 100%;
+  height: $rowH;
+  // border: 1px solid red;
+}
+
+.stackBox {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  // justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1.25em;
+  // border: 1px solid tan;
+
+  .stackHole {
+    position: relative;
+    height: 13px;
+    width: 41px;
+    top: 90%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url("../img/dev/sb/sandHole.svg");
+    z-index: 6;
+    // border: 1px solid cyan;
+  }
+
+  .stackNum {
+    position: absolute;
+    width: 100%;
+    top: 62%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #AD9984;
+    z-index: 7;
+    // border: 1px solid cyan;
+  }
+}
+
+.stack {
+  position: absolute;
+  top: 34px;
+  height: 80px;
+  width: 34px;
+
+  z-index: 8;
+  // border: 2px solid lime;
+}
+
+g.hidden {display: none;}
+.coinTop-2 { fill: #FFE592; }
+.coinSide-2 { fill: #FFC95F; }
+.coinTop-1 { fill: #ffffff; }
+.coinSide-1 { fill: #F0F9FC; }
+.coinTop-0 { fill: #F7C8A1; }
+.coinSide-0 { fill: #EFBD88; }

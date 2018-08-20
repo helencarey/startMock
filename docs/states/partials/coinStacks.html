@@ -1,0 +1,9 @@
+<div class="coinBox">
+  <div ng-repeat="stack in questCoins" class="stackBox">
+    <div id=" {{ 'stack' + stack.id}}" class="stack"
+      ng-include=" './img/dev/sb/coinStack.svg'">
+    </div>
+    <div class="stackNum">{{stack.id}}</div>
+    <div class="stackHole"></div>
+  </div>
+</div>

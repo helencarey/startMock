@@ -3,13 +3,11 @@
   Cordova/iOS adds margins & padding to <ul> <li> when it compiles, and not sure how to overwrite.
 
   parent: div.nav
-
   gh-pages site name prefix for routing: /startMock/
 -->
-
 <div ng-repeat="tab in navTabs">
-    <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/startMock/#/{{tab.link}}">
-
+    <!-- <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/startMock/#/{{tab.link}}"> -->
+    <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/#/{{tab.link}}">
       <div class="{{ ($index !== activeTab) ? 'navTabBg' : 'navTabBg active' }}">
         <div class="{{ ($index !== activeTab) ? 'navBgMain' : 'navBgMain active' }}">
             <div class="{{ ($index !== activeTab) ? 'navPatina' : 'navPatina active' }}"></div>

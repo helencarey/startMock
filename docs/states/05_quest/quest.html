@@ -3,8 +3,9 @@
   <div class="page">
 
     <div class="bgBox">
-      <div class="pageBg bgNoBF" ng-if="questState > 0"></div>
-      <div class="pageBg menuBG" ng-if="menuState > 0"></div>
+      <div class="img-bg img-bg_qtNoBF" ng-if="questState === 2"></div>
+      <div class="img-bg img-bg_qtBF--BG" ng-if="questState === 1"></div>
+      <!-- <div class="pageBg menuBG" ng-if="menuState > 0"></div> -->
     </div>
 
     <div class="pageContent">
@@ -14,8 +15,7 @@
         ng-include=" './states/partials/topRow.html' ">
       </div>
 
-
-      <!-- SECOND ROW  (word prompt, rating btns)============ ---->
+      <!-- SECOND ROW  (word prompt, rating btns) ============ ---->
       <div class="gRow secondRow">
         <div class="promptBox">
           <div class="promptText"> prompt text </div>
@@ -26,20 +26,24 @@
         </div>
 
       </div>
-      <!-- END OF SECOND ROW ============ ---->
-      <div class="gRow"></div>
+      <!-- END OF SECOND ROW ============ -->
 
-      <div id="sandBank" class=""></div>
+
+      <!-- COINS / PROGRESS BAR ============ -->
+      <div class="coinRow"
+        ng-include=" './states/partials/coinStacks.html' ">
+      </div>  <!-- end div.coinBow-->
+
+      <!-- SANDBANK ============ ---->
+      <div class="sbBox"
+        ng-include=" './states/partials/sandbank.html' ">
+      </div>  <!-- end div.nav-->
 
     </div> <!-- end pgContent -->
-
-    <div id="qt-break" class="dialog"></div>
-    <div id="qt-stop" class="dialog"></div>
-    <div id="qt-results" class="dialog"></div>
-    <div id="qtBF-help" class="dialog"></div>
-    <div id="qtNoBF-help" class="dialog"></div>
-
   </div> <!-- end .page -->
+
+  <div id="qt-stop" class="dialog"></div>
+
 
   <div
     class="nav"

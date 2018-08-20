@@ -14,3 +14,9 @@
   }
 
 */
+
+<div id="qt-break" class="dialog"></div>
+<div id="qt-stop" class="dialog"></div>
+<div id="qt-results" class="dialog"></div>
+<div id="qtBF-help" class="dialog"></div>
+<div id="qtNoBF-help" class="dialog"></div>

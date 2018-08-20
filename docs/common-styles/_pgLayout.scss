@@ -23,15 +23,6 @@ a:link, a:visited, a:hover { // just in case
 // PAGE BG ==========================================
 .bgBox {} // contains
 
-.pageBg {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 748px;
-  width: 1024px;
-  z-index: 1;
-  // border: 1px solid red;
-}
 .menuBG { z-index: 2; }
 
 // PAGE CONTENT ==========================================
@@ -158,6 +149,7 @@ a:link, a:visited, a:hover { // just in case
     line-height: 1em;
   }
 }
+
 
 
 // NAV ==========================================

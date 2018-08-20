@@ -90,7 +90,7 @@
   // border: 1px solid white;
 }
 
-img.navIcon {
+.navIcon {
   width: 56px;
   height: 56px;
   opacity: 0.65;
@@ -109,6 +109,13 @@ img.navIcon.active {
   font-weight: 700;
   opacity: 0.65;
 }
-.navTitle.active{
+.navTitle.active {
   opacity: 1;
 }
+
+svg.navIconSVG path {
+  fill: white;
+  width: 56px;
+  height: 56px;
+}
+// =======================================

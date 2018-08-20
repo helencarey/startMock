@@ -1,0 +1,42 @@
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0 1em;
+}
+
+h1 { display: block; }
+
+.contentBox {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 2em;
+  padding: 1em;
+}
+
+.asset {
+  display: flex;
+  flex-flow: column;
+  margin: 0.5em;
+  align-items: center;
+  min-width: 8%;
+  /* border: 1px solid lightblue; */
+}
+
+.img-bg {
+  height: 374px;
+  width: 512px;
+  /* border: 1px solid blue; */
+}
+
+#icoBox .asset {
+  margin: 1em;
+}
+
+.img-ico {
+  display: flex;
+  height: 128px;
+  width: 128px;
+  /* border: 1px solid red; */
+}
