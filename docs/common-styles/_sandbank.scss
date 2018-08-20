@@ -2,13 +2,14 @@
 .sbBox {
   position: absolute;
   top: $rowH * 4;
-  // display: flex;
   height: $rowH *2;
   width: 100%;
   // border: 1px solid red;
 
   .sbTop {
     position: absolute;
+    width: 1024px;
+    height: $rowH;
     top: $rowH + 10px;
     z-index: 6;
   }
@@ -36,7 +37,6 @@
     font-size: 1em;
     font-weight: 600;
     height: 2em;
-    // border: 1px solid pink;
   }
 
   .sDollarImgBox {
@@ -46,7 +46,6 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    // border: 1px solid pink;
   }
 
   .sDollar-img {
@@ -55,7 +54,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    // border: 1px solid red;
   }
 
   .sDollar-label {
@@ -64,22 +62,5 @@
     width: 84px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../img/dev/sb/sb-Dollar-label.svg");
-    // border: 1px solid red;
   }
 }
-
-
-// ==================================================
-.img-sandD {
-  background-image: url("../img/dev/sb/sbSandD.svg");
-}
-.img-sandD-done {
-  background-image: url("../img/dev/sb/sbSandD.svg");
-}
-.img-sandD-done--text {
-  background-image: url("../img/dev/sb/sbSandD.svg");
-}
-// .img-sDollar-label {
-//   background-image: url("../img/dev/sb/sb-Dollar-label.svg");
-// }

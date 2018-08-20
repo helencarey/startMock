@@ -269,9 +269,10 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     $scope.rateBtns = true;
     $scope.sandbank = true;
 
+
     //menu states ---------------------------------------------
-    $scope.menuState = 0;
-    $scope.numTrials = 100;
+    // $scope.menuState = 0;
+    $scope.numTrials = 20;
     $scope.promptType = null;  // 'word' || 'syllable' || null
 
     //activity states ---------------------------------------------
@@ -280,14 +281,16 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     $scope.activeTrial = 1;
     $scope.activeStack = 0;
     $scope.activeCoin = 0;
+    $scope.qtComplete = false;
 
     $scope.score = 0;
     $scope.qtData = [];
 
     // coinStacks
-    let numStack = $scope.numTrials/10;
+    $scope.numStack = $scope.numTrials/10;
+
     $scope.questCoins = [];
-    for(let i=0; i<numStack; i++) {
+    for(let i=0; i<$scope.numStack; i++) {
       // let rotation =
       let stack = { id: i }
       $scope.questCoins.push(stack)
@@ -319,22 +322,30 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     }
 
     $scope.update = function(val) {
-      if ($scope.activeStack < 9 && $scope.activeCoin < 9) {
+      if ($scope.activeStack < $scope.numStack && $scope.activeCoin < 9) {
         $scope.score += val;
         $scope.activeCoin+= 1;
-
+        $scope.activeTrial +=1;
         // $scope.promptText = $scope.promptType + ' ' + $scope.currTrial;
-      } else if ($scope.activeStack < 9 && $scope.activeCoin === 9) {
+
+      } else if ($scope.activeStack < ($scope.numStack - 1) && $scope.activeCoin === 9) {
         $scope.score += val;
         $scope.activeCoin = 0;
         $scope.activeStack += 1;
+        $scope.activeTrial +=1;
 
         //dia-break
         // $scope.promptText = '';
 
-      } else if ($scope.activeStack === 9 && $scope.activeCoin === 9) {
+      } else if ($scope.activeStack === ($scope.numStack - 1) && $scope.activeCoin === 9) {
+        $scope.score += val;
+        console.log('END');
+        $scope.rateBtns = false;
+        $scope.qtComplete = true;
+
+        // collect coins graphic
         // dia-results
-        // console.log()
+        console.log($scope.qtData);
         // $scope.Menu();
       }
       //push promp txt & rating to sess log

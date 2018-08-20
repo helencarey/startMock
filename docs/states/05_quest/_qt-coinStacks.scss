@@ -24,7 +24,6 @@
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  // justify-content: flex-end;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -38,7 +37,6 @@
     top: 90%;
     margin: 0 auto;
     background-repeat: no-repeat;
-    background-image: url("../img/dev/sb/sandHole.svg");
     z-index: 6;
     // border: 1px solid cyan;
   }
