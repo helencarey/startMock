@@ -8,8 +8,8 @@ var startMock = angular.module("startMock", [
 startMock.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'states/04_quiz/quiz.html',
-      controller: 'QuizCtrl'
+      templateUrl: 'states/05_quest/quest.html',
+      controller: 'QuestCtrl'
     })
     .when('/profiles', {
       templateUrl: 'states/01_profiles/profiles.html',
