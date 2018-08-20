@@ -1,2 +1,2 @@
 
-Visual: https://helencarey.github.io/startMock/#/
+Visual model: https://helencarey.github.io/startMock/#/
