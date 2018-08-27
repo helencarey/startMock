@@ -6,9 +6,9 @@
 
     <div class="pageContent">
 
-      <!-- TOP ROW  (template contains userFlag, pgTitle, toolbar)============ ---->
+      <!-- TOP ROW  (contains userFlag, pgTitle, toolbar)============ ---->
       <div class="gRow topRow"
-        ng-include=" './states/partials/topRow.html' ">
+        ng-include=" './states/partials/topRow/topRow.html' ">
       </div>
 
       <!-- STATE CONTENT -->
@@ -45,9 +45,8 @@
   </div> <!-- end .page -->
 
   <!-- NAV -->
-  <div
-    class="nav"
-    ng-include=" './states/partials/nav.html' ">
+  <div class="nav"
+    ng-include=" './states/partials/nav/nav.html' ">
   </div>  <!-- end div.nav-->
 
 </div> <!-- end .appBox -->

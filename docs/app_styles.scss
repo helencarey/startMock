@@ -17,9 +17,10 @@
 
 
 // common page components
-@import 'common-styles/nav';
-@import 'common-styles/userFlag';
-@import 'common-styles/toolbar';
+@import 'states/partials/nav/nav';
+@import 'states/partials/topRow/userFlag';
+@import 'states/partials/topRow/toolbar';
+
 // @import 'common-styles/promptBox';
 @import 'common-styles/rateBox';
 @import 'common-styles/dialogBox';

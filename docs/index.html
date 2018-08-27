@@ -16,8 +16,16 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script> -->
 
+
   <script src="./app_module.js"></script>
+
   <script src="./app_controllers.js"></script>
+  <script src="./states/01_profiles/profiles_controller.js"></script>
+  <script src="./states/02_tutorial/tutorial_controller.js"></script>
+  <script src="./states/03_freePlay/freePlay_controller.js"></script>
+  <script src="./states/04_quiz/quiz_controller.js"></script>
+  <script src="./states/05_quest/quest_controller.js"></script>
+  <script src="./states/06_resources/resources_controller.js"></script>
 
 </head>
 
@@ -26,8 +34,10 @@
   <div id="webView">
     <div id="appContainer">
       <div id="statusBar"></div>
+
       <div  id="appDisplay" ng-view>
       </div>
+
     </div>
 
   </div>
