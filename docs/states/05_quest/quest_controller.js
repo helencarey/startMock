@@ -152,7 +152,7 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
       }
 
       $scope.resetBtn = function() {
-        alert('rest btn'); 
+        alert('rest btn');
       }
       $scope.startNewQt();
     } // end setup_qtState3 (qtBF)
