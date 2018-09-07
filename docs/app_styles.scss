@@ -11,13 +11,12 @@
 @import 'common-styles/uiBase/ui-slider';
 @import 'common-styles/uiBase/ui-switch';
 
-@import 'common-styles/dialogBox'; //review
+@import 'common-styles/dialogBox'; //review this
 
 // common page elements
 @import 'states/partials/nav/nav';
 @import 'states/partials/topRow/userFlag';
 @import 'states/partials/topRow/toolbar';
-// @import 'common-styles/promptBox';
 
 // -------------------------------------------------------
 // icons & bg images (ai data URIs go here)
@@ -25,7 +24,7 @@
 @import 'common-styles/bgImg/img-ico';
 @import 'common-styles/bgImg/img-ui';
 @import 'common-styles/bgImg/img-sb';
-@import 'common-styles/bgImg/sbImgs';
+// @import 'common-styles/bgImg/sbImgs';
 @import 'common-styles/bgImg/diaImgs';
 
 
@@ -38,7 +37,7 @@
 @import 'states/04_quiz/quiz';
 @import 'states/04_quiz/partials/syllQzFlags';
 @import 'states/05_quest/quest';
-@import 'states/05_quest/qt-coinStacks';
-@import 'states/05_quest/qtBF-wave';
-@import 'states/05_quest/sandbank';
+@import 'states/05_quest/qtCoins/qt-coinStacks';
+@import 'states/05_quest/qtWave/qtBF-wave';
+@import 'states/05_quest/qtSandbank/sandbank';
 @import 'states/06_resources/resources';

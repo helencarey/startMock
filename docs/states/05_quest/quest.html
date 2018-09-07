@@ -2,6 +2,7 @@
 
   <div class="page">
 
+    <!-- BACKGROUND GRAPHICS ============ -->
     <div class="bgBox" ng-switch="qtState">
       <div class="img-bg img-bg_qtBF--BG" ng-switch-when="3"></div>
       <div class="img-bg img-bg_qtNoBF" ng-switch-when="2"></div>
@@ -20,6 +21,7 @@
         <div id="fzLabel" class="qtBF-fzLabel">1222</div>
       </div>
     </div>
+
 
     <div class="pageContent">
 
@@ -60,7 +62,7 @@
 
       <!-- COINS / PROGRESS BAR ============ -->
       <div class="coinRow" ng-if="!menu"
-        ng-include=" './states/partials/coinStacks.html' ">
+        ng-include=" './states/05_quest/qtCoins/coinStacks.html' ">
       </div>
       <!-- end div.coinRow -->
 
@@ -68,7 +70,7 @@
       <div
         class="{{(!sbIsOpen) ? 'sbBox' : 'sbBox--open' }}"
         ng-if="!menu"
-        ng-include=" './states/05_quest/sandbank.html' ">
+        ng-include=" './states/05_quest/qtSandbank/sandbank.html' ">
       </div>
       <!-- end div.nav -->
 
