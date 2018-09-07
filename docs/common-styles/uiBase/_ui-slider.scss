@@ -1,0 +1,121 @@
+// ------------------------------
+// SLIDER BASE
+
+.range-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 1.5em;
+  border: 1px solid pink;
+}
+
+.slider {
+  -webkit-appearance: none;  /* important, only way to override user-agent styles */
+  appearance: none; /* important */
+
+  width: 70%;
+  height: 10px;
+  background: $cSky-dark; /* Grey background */
+  border-radius: 10px;
+  outline: none; /* Remove outline */
+  opacity: 0.5; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.range-label {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 15%;
+  // height: 16px;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: $cTxtMain;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid pink;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+// // ------------------------------
+// // TOGGLE SWTICH SLIDER
+//
+// /* TEMPLATE
+//
+// <label class="switchBox">
+//   <input type="checkbox">
+//   <span class="switch-slider round"></span>
+// </label>
+//
+// */
+//
+// .switchBox {
+//   position: relative;
+//   display: inline-block;
+//   width: 60px;
+//   height: 32px;
+// }
+// .switchBox input {display:none;} // !important;
+// 
+// .switch-slider {
+//   position: absolute;
+//   cursor: pointer;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: #ccc;
+//   -webkit-transition: .4s;
+//   transition: .4s;
+// }
+//
+// .switch-slider:before {
+//   position: absolute;
+//   content: "";
+//   height: 26px;
+//   width: 26px;
+//   left: 4px;
+//   bottom: 4px;
+//   background-color: white;
+//   -webkit-transition: .4s;
+//   transition: .4s;
+// }
+//
+// input:checked + .switch-slider {
+//   background-color: #2196F3;
+// }
+//
+// input:focus + .switch-slider {
+//   box-shadow: 0 0 1px #2196F3;
+// }
+//
+// input:checked + .switch-slider:before {
+//   -webkit-transform: translateX(26px);
+//   -ms-transform: translateX(26px);
+//   transform: translateX(26px);
+// }
+//
+// /* Rounded sliders */
+// .switch-slider.round {
+//   border-radius: 34px;
+// }
+//
+// .switch-slider.round:before {
+//   border-radius: 50%;
+// }

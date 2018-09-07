@@ -1,6 +1,7 @@
 .img-sb_topSand {
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20id%3D%22sbTop%22%20viewBox%3D%220%200%201024%20110.83%22%3E%3Cpath%20id%3D%22sandBankFront%22%20fill%3D%22%23fcf3dc%22%20d%3D%22M1024%200c-8.11.15-16.89-.15-25%200-.74.1-1.38.57-3%20.83-35.71%205.75-46.75%2020.26-80.11%2027.87-1.56.35-.57.1-20.67%204.32-10.7%202.24-21%204.39-24.34%205.13-25.83%205.71-44.39%2010.49-47.3%2011.08-91%2018.57-289.87%2012.58-289.87%2012.58-110.77-5.47-150.55-14.14-217.78-9.66-8.83.59-38.89%202.79-81.22%204.7-19.05.86-49.44%202.06-86.46%202.73-52%20.94-101.52.57-148.25-.74v52h1024z%22/%3E%3C/svg%3E');
 	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 .img-sb_sDollar {
@@ -23,8 +24,9 @@
 	background-repeat: no-repeat;
 }
 
-// ===================================================
 .img-sb_sandHole {
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20id%3D%22hole%22%20viewBox%3D%220%200%2041%2013%22%3E%3Csymbol%20id%3D%22hole_1_%22%20viewBox%3D%22-20.5%20-6.5%2041%2013%22%3E%3Cellipse%20id%3D%22bottom_1_%22%20cy%3D%22.3%22%20fill%3D%22%23e0d0bd%22%20rx%3D%2220.5%22%20ry%3D%226.2%22/%3E%3Cellipse%20id%3D%22sides_1_%22%20cy%3D%22-.9%22%20fill%3D%22%23edddc3%22%20rx%3D%2218.5%22%20ry%3D%225.6%22/%3E%3C/symbol%3E%3Cuse%20width%3D%2241%22%20height%3D%2213%22%20x%3D%22-20.5%22%20y%3D%22-6.5%22%20overflow%3D%22visible%22%20transform%3D%22matrix%281%200%200%20-1%2020.5%206.5%29%22%20xlink%3Ahref%3D%22%23hole_1_%22/%3E%3C/svg%3E');
 	background-repeat: no-repeat;
 }
+
+// ======================================================

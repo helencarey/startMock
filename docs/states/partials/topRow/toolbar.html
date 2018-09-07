@@ -1,26 +1,29 @@
-<div ng-if="toolbar && !menu" class="toolBarTop">
+<div ng-if="toolbar" class="toolBarTop">
 
-  <div ng-if="toolbar.menu"
-    ng-click="Menu()"
-    class="tbTab">
-      <img class="tbTab-icon" ng-src="{{ 'img/axes.svg'}}">
+  <div ng-if="toolbar.menu" class="tbTab" ng-click="tbMenu()">
+      <img class="tbTab-icon" ng-src="{{ 'img/dev/axes.svg'}}">
       <div class="tbTab-txt">Menu</div>
   </div>
 
-  <div ng-if="toolbar.photo" class="tbTab">
-    <img class="tbTab-icon" ng-src="{{ 'img/axes.svg'}}">
+  <div ng-if="toolbar.settings" class="tbTab" ng-click="tbSettings()">
+      <img class="tbTab-icon" ng-src="{{ 'img/dev/axes.svg'}}">
+      <div class="tbTab-txt">Settings</div>
+  </div>
+
+  <div ng-if="toolbar.photo" class="tbTab" ng-click="tbPhoto()">
+    <img class="tbTab-icon" ng-src="{{ 'img/dev/axes.svg'}}">
     <div class="tbTab-txt">Photo</div>
   </div>
 
-  <div ng-if="toolbar.stop" class="tbTab" ng-click="Stop()">
+  <div ng-if="toolbar.stop" class="tbTab" ng-click="tbStop()">
     <img class="tbTab-icon"
-      ng-src="{{ 'img/toolbar/stopIcon.svg'}}">
+      ng-src="{{ 'img/dev/toolbar/stopIcon.svg'}}">
     <div class="tbTab-txt">Stop</div>
   </div>
 
-  <div ng-if="toolbar.help" class="tbTab">
+  <div ng-if="toolbar.help" class="tbTab" ng-click="tbHelp()">
     <img class="tbTab-icon"
-      ng-src="{{'img/toolbar/helpIcon.svg'}}">
+      ng-src="{{'img/dev/toolbar/helpIcon.svg'}}">
     <div class="tbTab-txt">Help</div>
   </div>
 

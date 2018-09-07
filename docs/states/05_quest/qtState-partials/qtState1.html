@@ -1,0 +1,68 @@
+<!-- <div ng-if="qtState === 1" class="qtMenu1"> -->
+
+  <div class="qtMenuOpts">
+
+    <div class="qtS1-optBox qtS1-cats">
+      <div class="qtS1-headerBox">
+        <div class="header-main">/r/ Categories</div>
+
+        <div class="header-right">
+          <label class="switchBox">
+            <input type="checkbox" name="allRs" value="false">
+            <span class="switch round"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="qtS1-catBox">cat option boxes</div>
+      <div class="qtS1-catDesc">option description</div>
+    </div>
+
+    <div class="qtS1-optBox qtS1-trials">
+
+      <div class="qtS1-headerBox">
+        <div class="header-main">Number of Trials in Quest</div>
+        <div class="header-right"></div>
+      </div>
+
+      <div class="range-container">
+        <div class="range-label">min. 20</div>
+        <!-- ng-change=""  -->
+        <input class="slider" type="range"
+          ng-model="numTrials"
+          min="20" max="100" step="10" />
+        <div class="range-label">max. 100</div>
+      </div>
+    </div>
+
+    <div class="qtS1-optBox qtS1-waveViz">
+      <div class="qtS1-headerBox">
+        <div class="header-main">Wave Visibility</div>
+        <div class="header-right">
+          <label class="switchBox">
+            <input type="checkbox" name="waveViz"
+              ng-model="waveViz">
+            <span class="switch round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="optRow">
+        <!-- <div class="btn" ng-click="setWave(true)">High Tide</div>
+        <div class="btn" ng-click="setWave(false)">Low Tide</div> -->
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="qtMenuFlag">
+    <div class="qtS1-optBox">cat selections</div>
+    <div class="qtS1-optBox"># of trials</div>
+    <div class="qtS1-optBox">
+      <p>wave visibility is {{waveViz}}</p>
+    <div class="qtS1-optBox">save &amp; submit</div>
+
+  </div>
+
+
+<!-- </div> end .qtMenu1 -->

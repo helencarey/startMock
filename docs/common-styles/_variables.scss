@@ -1,6 +1,20 @@
+/* NOTE: Common scss vars will go here once styles are better established
+
+*/
+
+// Z-INDICES ====================================
+/*
+nav: 100
+userFlag: 99
+sandbank: starts at 10
+
+*/
+
 // PALLETTE ==============================================
 
 $cBG: #c2f2f2; //sky blue
+$cSky: #c2f2f2; //sky blue
+$cSky-dark: #93C9C7;
 //$cWhite: #;		// white
 //$cBlack: #;
 
@@ -9,12 +23,25 @@ $cTxtMain: #3D6D84; //navy blue
 // $cTxtError: #;
 // $cTxtWarn: #;
 
+$cGold400: #ffd576;
+$cGold500: #ffc95f;
+
+$cSilver400: #fff;
+$cSilver500: #f0f9fc;
+
+$cBronze400: #f7c8a1;
+$cBronze500: #efbd88;
+
 
 $cDebug: #FF0088;
 $cPencil: #e3e3e3;
 
 // sand
+$cSandbank-bg: #FCF3DC;
+
+
 // sky
+
 // golds
 // silver
 // bronze
@@ -28,17 +55,3 @@ $cPencil: #e3e3e3;
 // GRID	==============================================
 $rowH: 124.66px; // $rowH: 100vh/6;
 $colW: 85.33px;  // $colW: 100vw/12;
-
-
-
-	// // OLD PALETTE
-	// $blue: #53c8e9;			// primary-c
-	// $yellow: #FFC95F;		// secondary-c or accent-c
-	// $grey: #4d4d4d;  		// text-c
-  //
-	// $light-blue: #c5f3ff;	// sky
-	// $white-blue: #F0F9FC;	// very pale blue. used primarily for container backgrounds
-	// //$dark-blue:;			// dark blue. use: peak lines?
-
-	//$light-yellow:;			// sand-light
-	//$brown:;				// sand-dark

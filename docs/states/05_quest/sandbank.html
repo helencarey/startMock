@@ -1,0 +1,110 @@
+<!-- parent div.sbBox"> -->
+
+<!-- top of sandbank visible in-game -->
+<!-- sandDollar icon/btn -->
+<div class="sDollarBox" >
+  <div class="pointsBox">
+    <div ng-if="!sbIsOpen"
+      class="points-txt">
+      {{score}} points
+    </div>
+  </div>
+  <div class="sDollarImgBox">
+    <div ng-if="!qtComplete && !sbIsOpen"
+      ng-click="sbOpen()"
+      class="sDollar-img img-sb_sDollar">
+    </div>
+    <div ng-if="!qtComplete && sbIsOpen"
+      ng-click="sbClose()"
+      class="sDollar-img img-sb_sDollar">
+    </div>
+
+    <div ng-if="qtComplete"
+      ng-click="collectCoins()"
+      class="sDollar-img img-sb_sDollar--doneTxt">
+    </div>
+
+    <div class="sDollar-label img-sb_sDollarLabel"></div>
+  </div>
+</div>
+
+<div class="sbTop img-sb_topSand"></div>
+
+<!-- sandbank drawer  -->
+<div class="sbBgBody">
+  <div class="sbBgBox">
+    <div class="sbBgRipples img-bg_sbRipples"></div>
+  </div>
+
+
+  <div class="sbContent">
+
+    <div class="sbHeader">
+      <h1>Achievements</h1>
+    </div>
+
+    <div class="sbR1">
+
+      <div class="sbStatsBox">
+        <div class="sbStatRow" ng-repeat="stat in sbStatsData">
+          <div class="sbStat">{{stat.stat}}</div>
+          <div class="sbStatTitle">{{stat.title}}</div>
+        </div>
+      </div>
+      <!-- end .sbStatsBox-->
+
+      <div class="sbSuites">
+        <div class="sbSuiteBox" ng-repeat="suite in sbSuitesData">
+            <div ng-if="suite.achieved">
+               <div class="sbSuite-img {{ suite.imgClass}}"></div>
+               <div class="sbSuite-labelBox">
+                 <div class="sbSuite-label-title sbSuite-label-title--achieved">{{suite.title}}</div>
+                 <div class="sbSuite-label-date">{{suite.date}}</div>
+               </div>
+             </div>
+
+             <div ng-if="!suite.achieved">
+                <div class="sbSuite-img img-sb_badge-suite00"></div>
+                <div class="sbSuite-labelBox">
+                  <div class="sbSuite-label-title">{{suite.title}}</div>
+                </div>
+              </div>
+          </div>
+      </div> <!-- end .sbSuites -->
+    </div> <!-- end .sbR1 -->
+
+    <div class="sbR2">
+      <div class="sbBadgeBox" ng-repeat="badge in sbBadgeData">
+        <div class="sbBadge">
+          <div class="badgeImg {{badge.imgClass}}"></div>
+          <div class="badgeTitle">{{badge.title}}</div>
+          <div class="badgeScore">{{badge.scores[0]}}</div>
+        </div>
+
+        <div id="{{badge.id}}" class="sbScoresBox">
+            <!-- <div ng-repeat="score in sbBadgeData[$index].scores track by $index">{{score}}</div> -->
+
+            <div class="scoresRow">
+              <div class="rank">2nd: </div>
+              <div class="score">{{sbBadgeData[$index].scores[1]}}</div>
+            </div>
+            <div class="scoresRow">
+              <div class="rank">3rd: </div>
+              <div class="score">{{sbBadgeData[$index].scores[2]}}</div>
+            </div>
+            <div class="scoresRow">
+              <div class="rank">4th: </div>
+              <div class="score">{{sbBadgeData[$index].scores[3]}}</div>
+            </div>
+            <div class="scoresRow">
+              <div class="rank">5th: </div>
+              <div class="score">{{sbBadgeData[$index].scores[4]}}</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- end .sbR1 -->
+
+  </div>
+
+</div>
