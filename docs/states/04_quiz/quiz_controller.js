@@ -6,7 +6,7 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http',
     $scope.activeTab = 3;
     $scope.state = 'quiz';
 
-    //user -------------------------------------------------------
+    //user ---------------------------------------------------
     $scope.authUser = {
       firstName: 'Tara',
       lastName: 'McAllister'

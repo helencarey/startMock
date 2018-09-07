@@ -1,0 +1,35 @@
+// -----------------------------------
+// DEFAULT RECT BUTTON
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 64px;
+  width: 128px;
+  max-width: 128px;
+  margin: 0.5em;
+  padding: 0.5em 1.25em;
+
+  font-size: 0.75em;
+  font-weight: 500;
+  color: $cTxtMain;
+
+  border-radius: 10px;
+  background-color: #ACE2E5;
+  border-bottom: 1px solid #A1D3D3;
+  border-right: 1px solid #A1D3D3;
+  z-index: 10;
+
+  cursor: pointer;
+}
+.btn:active {
+  background-color: #D7F4F3;
+}
+.btn:visited {
+  background-color: #B3DDDB;
+}
+
+// -----------------------------------
+// LET'S GO! Btn

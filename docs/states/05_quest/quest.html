@@ -2,47 +2,81 @@
 
   <div class="page">
 
-    <div class="bgBox">
-      <div class="img-bg img-bg_qtNoBF" ng-if="questState === 2"></div>
-      <div class="img-bg img-bg_qtBF--BG" ng-if="questState === 1"></div>
-      <!-- <div class="pageBg menuBG" ng-if="menuState > 0"></div> -->
+    <div class="bgBox" ng-switch="qtState">
+      <div class="img-bg img-bg_qtBF--BG" ng-switch-when="3"></div>
+      <div class="img-bg img-bg_qtNoBF" ng-switch-when="2"></div>
+      <div class="img-bg" ng-switch-when="1"></div>
+      <div class="img-bg img-bg_qz-BG" ng-switch-when="0"></div>
+      <div class="img-bg img-bg_qz-FG" ng-switch-when="0"></div>
+    </div>
+
+    <!-- ABS POSITIONED WAVE STUFF ============ -->
+    <div ng-if="qtState === 3" class="waveEles">
+      <div class="waveBox">WAVE GRAPH GOES HERE</div>
+      <div class="img-bg img-bg_qtBF--MG"></div>
+      <div class="">star slider</div>
+      <div class="img-bg img-bg_qtBF--FG">
+        <div class="qtBF-resetBtn img-ui_reset" ng-click="resetBtn()"></div>
+        <div id="fzLabel" class="qtBF-fzLabel">1222</div>
+      </div>
     </div>
 
     <div class="pageContent">
 
-      <!-- TOP ROW  (contains userFlag, pgTitle, toolbar)============ ---->
+      <!-- TOP ROW  (contains userFlag, pgTitle, toolbar) ============ ---->
       <div class="gRow topRow"
         ng-include=" './states/partials/topRow/topRow.html' ">
       </div>
 
-      <!-- SECOND ROW  (word prompt, rating btns) ============ ---->
+      <!-- SECOND ROW  (menu content OR word prompt & rating btns) ============ ---->
       <div class="gRow secondRow">
-        <div class="promptBox">
-          <div class="promptText"> prompt text </div>
-        </div>
 
-        <div ng-if="rateBtns && !menu">
-          <div ng-include=" './states/partials/rateBtns.html' "></div>
+        <div ng-if="menu" class="qtMenuBox">
+          <div ng-if="qtState === 0" class="qtMenu0"
+            ng-include=" './states/05_quest/qtState-partials/qtState0.html' ">
+          </div>
+
+          <div ng-if="qtState === 1" class="qtMenu1"
+            ng-include=" './states/05_quest/qtState-partials/qtState1.html' ">
+          </div>
         </div>
+        <!--  end .qtMenuBox-->
+
+        <div ng-if="!menu" class="qt-displayBox">
+          <div class="promptBox">
+            <div class="promptText">prompt text</div>
+          </div>
+
+          <div ng-if="rateBtns">
+            <div ng-include=" './states/partials/rateBtns.html' ">
+            </div>
+          </div>
+        </div>
+        <!--  end .qtDisplayBox-->
 
       </div>
       <!-- END OF SECOND ROW ============ -->
 
 
       <!-- COINS / PROGRESS BAR ============ -->
-      <div class="coinRow"
+      <div class="coinRow" ng-if="!menu"
         ng-include=" './states/partials/coinStacks.html' ">
-      </div>  <!-- end div.coinBow-->
+      </div>
+      <!-- end div.coinRow -->
 
       <!-- SANDBANK ============ ---->
-      <div class="sbBox"
-        ng-include=" './states/partials/sandbank.html' ">
-      </div>  <!-- end div.nav-->
+      <div
+        class="{{(!sbIsOpen) ? 'sbBox' : 'sbBox--open' }}"
+        ng-if="!menu"
+        ng-include=" './states/05_quest/sandbank.html' ">
+      </div>
+      <!-- end div.nav -->
 
     </div> <!-- end pgContent -->
   </div> <!-- end .page -->
 
   <div id="qt-stop" class="dialog"></div>
+
 
 
   <div

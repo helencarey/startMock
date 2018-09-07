@@ -67,13 +67,13 @@
 .navPatina {
   height: 113px;
   width: 50px;
-  background-image: url('../img/nav/navTabOFF.svg');
+  background-image: url('../img/dev/nav/navTabOFF.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
 .navPatina.active {
   width: 60px;
-  background-image: url('../img/nav/navTabON.svg');
+  background-image: url('../img/dev/nav/navTabON.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -95,7 +95,7 @@
   height: 56px;
   opacity: 0.65;
 }
-img.navIcon.active {
+.navIcon.active {
   opacity: 1;
 }
 

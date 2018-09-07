@@ -1,0 +1,9 @@
+TODO:
+
+IMAGES:
+- bg img for bg_qz (fg and bg in 1 data URI)
+- icon for back in toolBar
+
+
+CONTENT DEV:
+- qzState0: help content

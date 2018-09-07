@@ -6,8 +6,12 @@
   gh-pages site name prefix for routing: /startMock/
 -->
 <div ng-repeat="tab in navTabs">
-    <!-- <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/startMock/#/{{tab.link}}"> -->
-    <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/#/{{tab.link}}">
+    <!-- gh docs -->
+    <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/startMock/#/{{tab.link}}">
+
+    <!-- local -->
+    <!-- <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/#/{{tab.link}}"> -->
+
       <div class="{{ ($index !== activeTab) ? 'navTabBg' : 'navTabBg active' }}">
         <div class="{{ ($index !== activeTab) ? 'navBgMain' : 'navBgMain active' }}">
             <div class="{{ ($index !== activeTab) ? 'navPatina' : 'navPatina active' }}"></div>
@@ -16,7 +20,7 @@
 
       <div class="navContent">
         <img class="{{ ($index !== activeTab) ? 'navIcon' : 'navIcon active' }}"
-            ng-src="{{ 'img/nav/' + tab.icon }}">
+            ng-src="{{ 'img/dev/nav/' + tab.icon }}">
         <div class="{{ ($index !== activeTab) ? ' navTitle' : ' navTitle active' }}">
           {{tab.txt}}</div>
       </div>

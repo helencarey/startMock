@@ -1,0 +1,51 @@
+.waveEles {
+  position:absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.waveBox {
+  position: absolute;
+  width: $colW * 11;
+  height: $rowH;
+  left: $colW * 1.05;
+  top: $rowH * 3;
+
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid red;
+}
+
+.qtBF-resetBtn {
+  position: absolute;
+  width: 90px;
+  height: 60px;
+  left: $colW * 9.5;
+  top: $rowH * 3.5;
+  transform: rotate(4deg);
+
+  z-index: 5;
+}
+
+.qtBF-fzLabel {
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  left: $colW * 2.44;
+  top: $rowH * 2.73;
+  color: #62a6b9;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-align: center;
+
+}
+
+.qtBF-starSlider {
+    border: 1px solid red;
+
+
+}

@@ -87,6 +87,7 @@ a:link, a:visited, a:hover { // just in case
   justify-content: space-between;
   align-items: center;
   padding-left: 86px; //navW - navTab border rad
+  // border: 1px solid red;
 
   .topRow-col {  // pg layout
     display: flex;
@@ -123,23 +124,39 @@ a:link, a:visited, a:hover { // just in case
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  width: 100%;
+  // height: auto;
+  // min-height: $rowH;
   justify-content: space-between;
-  padding-left: $colW * 3;
+  padding-left: $colW * 2;
   // border: 1px solid tan;
+  z-index: 5;
+}
+
+.qt-displayBox { // for layout
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  // border: 1px solid red;
 }
 
 .promptBox {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
+  padding-left: $colW;
   padding-bottom: 1em;
   align-items: center;
-  width: $colW * 7;
-  //border-bottom: 2px solid white;
+  height: $rowH;
+  width: $colW * 8;
+  // border: 1px solid green;
+  //border-bottom: 2px solid white
 
   .promptText-menu {
     color: $cTxtMain;
-    font-size: 2.5em;
+    font-size: 2.25em;
     line-height: 1em;
   }
 
@@ -147,6 +164,7 @@ a:link, a:visited, a:hover { // just in case
     color: $cTxtMain;
     font-size: 3.5em;
     line-height: 1em;
+    // border: 1px solid blue;
   }
 }
 
