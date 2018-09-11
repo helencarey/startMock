@@ -172,7 +172,9 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
       $scope.qtComplete = false;
       $scope.qtData = [];
 
-      $scope.score = 0;
+      $scope.scoreMax = $scope.numTrials * 2;
+      $scope.score = 0; // sum of Rating points
+      $scope.displayScore = 0; // % correct
 
       // coinStack setup
       $scope.numStack = $scope.numTrials/10;
@@ -212,10 +214,14 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     }
 
     $scope.update = function(val) {
+      // incoming val = gold: 2, silver: 1, bronze: 0
+
       if ($scope.activeStack < $scope.numStack && $scope.activeCoin < 9) {
         $scope.score += val;
         $scope.activeCoin+= 1;
         $scope.activeTrial +=1;
+        
+        $scope.displayScore = Math.round( ($scope.score /($scope.activeTrial * 2) * 100) );
         // $scope.promptText = $scope.promptType + ' ' + $scope.currTrial;
 
       } else if ($scope.activeStack < ($scope.numStack - 1) && $scope.activeCoin === 9) {
@@ -224,6 +230,7 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
         $scope.activeStack += 1;
         $scope.activeTrial +=1;
 
+        $scope.displayScore = Math.round( ($scope.score /($scope.activeTrial * 2) * 100) );
         //dia-break
         // $scope.promptText = '';
 
