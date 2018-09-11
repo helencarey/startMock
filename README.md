@@ -23,6 +23,6 @@ $ gulp
 ----
 **IMAGE REPO**
 
-sdfsdf
+As a reference, I can put the graphics as png and svg in 'graphics-src'
 
 
