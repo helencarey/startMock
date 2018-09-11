@@ -18,5 +18,11 @@ THEN:
 $ gulp
 ```
 
------
-Everything is in 'docs,' there is no build process.
+(All the src code is in 'docs')  
+
+----
+**IMAGE REPO**
+
+sdfsdf
+
+
