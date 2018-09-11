@@ -1,0 +1,33 @@
+// parent is .qtMenuBox
+
+.qtMenu0 {
+
+  .menu-promptBox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin-left: $colW/2;
+    padding-bottom: 1em;
+    align-items: center;
+    height: $rowH/2;
+    width: $colW * 8;
+    // border-bottom: 1px solid white;
+    // border: 1px solid white;
+
+    .menu-promptText {
+      color: $cTxtMain;
+      font-size: 2.5em;
+      line-height: 1em;
+    }
+  }
+  .optBox {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: $colW* 2;
+    padding: 1em 0;
+    width: $colW * 5;
+    justify-content: space-between;
+  }
+
+} // end .qtMenu0

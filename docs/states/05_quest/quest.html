@@ -15,14 +15,20 @@
     <div ng-if="qtState === 3" class="waveEles">
       <div class="waveBox">WAVE GRAPH GOES HERE</div>
       <div class="img-bg img-bg_qtBF--MG"></div>
-      <div class="">star slider</div>
+
+      <div class="lpc_range-container">
+        <input class="lpc_slider" type="range"
+          ng-model="hzStar"
+          min="0" max="5000" step="1" />
+      </div>
+
       <div class="img-bg img-bg_qtBF--FG">
         <div class="qtBF-resetBtn img-ui_reset" ng-click="resetBtn()"></div>
-        <div id="fzLabel" class="qtBF-fzLabel">1222</div>
+        <div id="fzLabel" class="qtBF-fzLabel">{{hzStar}}</div>
       </div>
     </div>
 
-
+    <!-- COMMON PAGE CONTENT ============ -->
     <div class="pageContent">
 
       <!-- TOP ROW  (contains userFlag, pgTitle, toolbar) ============ ---->
@@ -33,7 +39,7 @@
       <!-- SECOND ROW  (menu content OR word prompt & rating btns) ============ ---->
       <div class="gRow secondRow">
 
-        <div ng-if="menu" class="qtMenuBox">
+        <div ng-if="menu" class="qt-menuBox">
           <div ng-if="qtState === 0" class="qtMenu0"
             ng-include=" './states/05_quest/qtState-partials/qtState0.html' ">
           </div>
@@ -55,7 +61,6 @@
           </div>
         </div>
         <!--  end .qtDisplayBox-->
-
       </div>
       <!-- END OF SECOND ROW ============ -->
 
@@ -78,6 +83,8 @@
   </div> <!-- end .page -->
 
   <div id="qt-stop" class="dialog"></div>
+  <div id="qt-break" class="dialog"></div>
+  <div id="qt-results" class="dialog"></div>
 
 
 

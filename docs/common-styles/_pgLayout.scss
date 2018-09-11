@@ -133,40 +133,34 @@ a:link, a:visited, a:hover { // just in case
   z-index: 5;
 }
 
-.qt-displayBox { // for layout
+// for layout in state2 & state3
+// holds promptBox & rateBtns
+.qt-displayBox {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-  // border: 1px solid red;
 }
 
-.promptBox {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
-  padding-left: $colW;
-  padding-bottom: 1em;
-  align-items: center;
-  height: $rowH;
-  width: $colW * 8;
-  // border: 1px solid green;
-  //border-bottom: 2px solid white
-
-  .promptText-menu {
-    color: $cTxtMain;
-    font-size: 2.25em;
-    line-height: 1em;
-  }
-
-  .promptText {
-    color: $cTxtMain;
-    font-size: 3.5em;
-    line-height: 1em;
-    // border: 1px solid blue;
-  }
-}
+// .promptBox {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: flex-end;
+//   padding-left: $colW;
+//   padding-bottom: 1em;
+//   align-items: center;
+//   height: $rowH;
+//   width: $colW * 8;
+//   // border: 1px solid green;
+//   //border-bottom: 2px solid white
+//
+//   .promptText-menu {
+//     color: $cTxtMain;
+//     font-size: 2.25em;
+//     line-height: 1em;
+//   }
+//}
 
 // NAV ==========================================
 // nav styles are at common-styles/nav

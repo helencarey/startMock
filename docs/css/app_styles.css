@@ -107,24 +107,6 @@ a:link, a:visited, a:hover {
   justify-content: space-between;
   width: 100%; }
 
-.promptBox {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
-  padding-left: 85.33px;
-  padding-bottom: 1em;
-  align-items: center;
-  height: 124.66px;
-  width: 682.64px; }
-  .promptBox .promptText-menu {
-    color: #3D6D84;
-    font-size: 2.25em;
-    line-height: 1em; }
-  .promptBox .promptText {
-    color: #3D6D84;
-    font-size: 3.5em;
-    line-height: 1em; }
-
 .btn {
   display: flex;
   justify-content: center;
@@ -897,33 +879,57 @@ path.bronze {
 polygon.bronze {
   fill: #F7C8A1; }
 
-.qtMenuBox {
+.qt-menuBox {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
   width: 853.3px;
   height: 623.3px;
-  padding-top: 31.165px; }
+  padding-top: 41.55333px; }
 
-.qtMenu0 {
+.qt-displayBox {
   position: relative;
   display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  height: 100%; }
-  .qtMenu0 .promptBox {
-    margin-left: 85.33px;
-    margin-right: 170.66px;
-    padding-left: 0;
-    width: auto; }
-  .qtMenu0 .optBox {
-    position: relative;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%; }
+  .qt-displayBox .promptBox {
     display: flex;
-    flex-flow: row nowrap;
-    margin-left: 170.66px;
-    padding: 1em 0;
-    width: 426.65px;
-    justify-content: space-between; }
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    margin-left: 85.33px;
+    padding-bottom: 1em;
+    align-items: center;
+    height: 124.66px;
+    width: 597.31px;
+    border-bottom: 1px solid white; }
+  .qt-displayBox .promptText {
+    color: #3D6D84;
+    font-size: 3.5em;
+    line-height: 1em; }
+
+.qtMenu0 .menu-promptBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin-left: 42.665px;
+  padding-bottom: 1em;
+  align-items: center;
+  height: 62.33px;
+  width: 682.64px; }
+  .qtMenu0 .menu-promptBox .menu-promptText {
+    color: #3D6D84;
+    font-size: 2.5em;
+    line-height: 1em; }
+
+.qtMenu0 .optBox {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 170.66px;
+  padding: 1em 0;
+  width: 426.65px;
+  justify-content: space-between; }
 
 .qtMenu1 {
   position: relative;
@@ -931,6 +937,12 @@ polygon.bronze {
   flex-flow: row nowrap;
   width: 100%;
   height: 100%; }
+
+.qtMenuFlag {
+  display: flex;
+  flex-flow: column nowrap;
+  color: red;
+  width: 40%; }
 
 .qtMenuOpts {
   display: flex;
@@ -975,12 +987,81 @@ polygon.bronze {
     align-items: center;
     width: 100%; }
 
-.qtMenuFlag {
+.waveEles {
+  position: absolute;
   display: flex;
-  flex-flow: column nowrap;
-  color: red;
-  width: 40%;
-  border: 1px solid lime; }
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+.waveBox {
+  position: absolute;
+  width: 938.63px;
+  height: 124.66px;
+  left: 85.33px;
+  top: 373.98px;
+  text-align: center;
+  font-weight: 700; }
+
+.qtBF-resetBtn {
+  position: absolute;
+  width: 90px;
+  height: 60px;
+  left: 810.635px;
+  top: 436.31px;
+  transform: rotate(4deg);
+  z-index: 5; }
+
+.qtBF-fzLabel {
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  left: 208.2052px;
+  top: 340.3218px;
+  color: #62a6b9;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center; }
+
+.qtBF-starSlider {
+  border: 1px solid red; }
+
+.lpc_range-container {
+  position: absolute;
+  top: 249.32px;
+  left: 255.99px;
+  width: 597.31px;
+  height: 311.65px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 99; }
+
+.lpc_slider {
+  -webkit-appearance: none;
+  /* important, only way to override user-agent styles */
+  appearance: none;
+  /* important */
+  width: 90%;
+  height: 20px;
+  background: none;
+  border-radius: 10px;
+  outline: none; }
+
+.lpc_slider::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 96px;
+  top: -135px;
+  min-height: 333px;
+  background-image: url("/img/starSlider.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  cursor: pointer; }
 
 .coinRow {
   position: absolute;
@@ -1023,7 +1104,7 @@ polygon.bronze {
     text-align: center;
     font-size: 1.5em;
     font-weight: 600;
-    color: #AD9984;
+    color: #988675;
     z-index: 7; }
 
 .stack {
@@ -1053,48 +1134,6 @@ g.hidden {
 
 .coinSide-0 {
   fill: #EFBD88; }
-
-.waveEles {
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%; }
-
-.waveBox {
-  position: absolute;
-  width: 938.63px;
-  height: 124.66px;
-  left: 89.5965px;
-  top: 373.98px;
-  text-align: center;
-  font-weight: 700;
-  border: 1px solid red; }
-
-.qtBF-resetBtn {
-  position: absolute;
-  width: 90px;
-  height: 60px;
-  left: 810.635px;
-  top: 436.31px;
-  transform: rotate(4deg);
-  z-index: 5; }
-
-.qtBF-fzLabel {
-  position: absolute;
-  width: 48px;
-  height: 24px;
-  left: 208.2052px;
-  top: 340.3218px;
-  color: #62a6b9;
-  font-size: 0.9em;
-  font-weight: 700;
-  letter-spacing: 0px;
-  text-align: center; }
-
-.qtBF-starSlider {
-  border: 1px solid red; }
 
 .sbBox {
   position: absolute;
@@ -1138,6 +1177,31 @@ g.hidden {
     left: 853.3px;
     width: 170.66px; }
 
+.sbBgBody {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .sbBgBody .sbBgBox {
+    display: block;
+    position: absolute;
+    margin-top: 62.33px;
+    height: 685.63px;
+    width: 1023.96px;
+    background-color: #FCF3DC;
+    z-index: 11; }
+  .sbBgBody .sbBgRipples {
+    display: block;
+    position: absolute;
+    margin-top: 62.33px;
+    height: 623.3px;
+    width: 1024px;
+    top: 0;
+    left: 0;
+    z-index: 12; }
+
 .sDollarBox {
   position: relative;
   top: 93.495px;
@@ -1176,31 +1240,6 @@ g.hidden {
     width: 84px;
     background-repeat: no-repeat;
     background-size: contain; }
-
-.sbBgBody {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10; }
-  .sbBgBody .sbBgBox {
-    display: block;
-    position: absolute;
-    margin-top: 62.33px;
-    height: 685.63px;
-    width: 1023.96px;
-    background-color: #FCF3DC;
-    z-index: 11; }
-  .sbBgBody .sbBgRipples {
-    display: block;
-    position: absolute;
-    margin-top: 62.33px;
-    height: 623.3px;
-    width: 1024px;
-    top: 0;
-    left: 0;
-    z-index: 12; }
 
 .sbContent {
   position: relative;

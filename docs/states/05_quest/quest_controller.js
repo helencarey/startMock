@@ -12,12 +12,9 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
       Quest has 4 states.
       Tara has asked for qtState2 & qtState3 to be completed first.
 
-        QtState0 (init state. menu0) Menu State: 'Select Word Quest or Syll Quest' (In the future this state can hold saved quest configs for the user to choose from)
-
+        qtState0 (init state. menu0) Menu State: 'Select Word Quest or Syll Quest' (In the future this state can hold saved quest configs for the user to choose from)
         qtState1  (menu1)  Menu State: Settings Config for Quest
-
         qtState2 (qtNoBF)  Activity State: Quest with no wave
-
         qtState3 (qtBF)  Activity State: Quest with wave
     */
 
@@ -25,12 +22,7 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     $scope.qtState = 0;
     $scope.qtStateDesc = '';
     $scope.qtType = 'syllable'; // DEBUG var. empty str for LIVE
-    $scope.numTrials = 20; // DEBUG var.
-    $scope.activeTrial = 1;
-    $scope.activeStack = 0;
-    $scope.activeCoin = 0;
-    $scope.qtComplete = false;
-    $scope.score = 0;
+    $scope.numTrials = 100; // DEBUG var.
 
     //user -------------------------------------------------------
     $scope.authUser = { firstName: 'Helen', lastName: 'Carey', };
@@ -151,9 +143,12 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
         'help': true
       }
 
+      $scope.hzStar = 1140;
+
       $scope.resetBtn = function() {
-        alert('rest btn');
+        alert('reset target btn');
       }
+
       $scope.startNewQt();
     } // end setup_qtState3 (qtBF)
     // =====================================================

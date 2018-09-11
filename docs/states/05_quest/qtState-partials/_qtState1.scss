@@ -1,0 +1,76 @@
+// parent is .qtMenuBox
+
+.qtMenu1 {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%;
+  // border: 1px solid pink;
+}
+
+.qtMenuFlag {
+  display: flex;
+  flex-flow: column nowrap;
+  color: red;
+  width: 40%;
+  // border: 1px solid lime;
+}
+
+.qtMenuOpts {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 60%;
+  // padding-top: $rowH/4;
+  padding-right: $colW/2;
+  padding-bottom: $rowH/2;
+  justify-content: space-between;
+  // border: 1px solid red;
+} // end .qtMenuOpts
+
+.qtS1-optBox { // templating classes
+  min-height: $rowH;
+  border: 1px solid pink;
+
+  .qtS1-headerBox {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+
+    .header-main {
+      font-size: 1.75em;
+      color: $cTxtMain;
+      font-weight: 400;
+      margin-bottom: 0.5em;
+    }
+    .header-right {
+
+    }
+  }
+} // .qtS1-optBox
+
+.qtS1-cats {
+  height: $rowH * 2.2;
+  width: 100%;
+}
+.qtS1-trials {
+  height: $rowH * 1;
+  width: 100%;
+}
+
+.qtS1-waveViz {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: $rowH * 1;
+
+  .optRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}

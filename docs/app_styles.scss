@@ -36,8 +36,15 @@
 // state-specific styles
 @import 'states/04_quiz/quiz';
 @import 'states/04_quiz/partials/syllQzFlags';
+
 @import 'states/05_quest/quest';
+@import 'states/05_quest/qtState-partials/qtState0';
+@import 'states/05_quest/qtState-partials/qtState1';
+@import 'states/05_quest/qtState-partials/qtState3';
 @import 'states/05_quest/qtCoins/qt-coinStacks';
-@import 'states/05_quest/qtWave/qtBF-wave';
+// @import 'states/05_quest/qtWave/qtBF-wave';
 @import 'states/05_quest/qtSandbank/sandbank';
+@import 'states/05_quest/qtSandbank/sb-inGame';
+@import 'states/05_quest/qtSandbank/sb-achievements';
+
 @import 'states/06_resources/resources';

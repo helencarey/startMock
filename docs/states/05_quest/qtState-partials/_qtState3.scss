@@ -1,0 +1,93 @@
+.waveEles {
+  position:absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.waveBox {
+  position: absolute;
+  width: $colW * 11;
+  height: $rowH;
+  left: $colW;
+  top: $rowH * 3;
+
+  text-align: center;
+  font-weight: 700;
+  // border: 1px solid red;
+}
+
+.qtBF-resetBtn {
+  position: absolute;
+  width: 90px;
+  height: 60px;
+  left: $colW * 9.5;
+  top: $rowH * 3.5;
+  transform: rotate(4deg);
+
+  z-index: 5;
+}
+
+.qtBF-fzLabel {
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  left: $colW * 2.44;
+  top: $rowH * 2.73;
+  color: #62a6b9;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+
+}
+
+.qtBF-starSlider {
+    border: 1px solid red;
+
+
+}
+
+// ------------------------------
+// SLIDER BASE
+
+.lpc_range-container {
+  position: absolute;
+  top: $rowH * 2;
+  left: $colW * 3;
+  width: $colW * 7;
+  height: $rowH * 2.5;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+
+  // border: 1px solid lime;
+  z-index: 99;
+}
+
+.lpc_slider {
+  -webkit-appearance: none;  /* important, only way to override user-agent styles */
+  appearance: none; /* important */
+  width: 90%;
+  height: 20px;
+  background: none;//$cSky-dark;
+  border-radius: 10px;
+  outline: none;
+}
+
+.lpc_slider::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 96px;
+    top: -135px;
+    min-height: 333px;
+    background-image: url('/img/starSlider.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    // border: 1px solid red;
+    cursor: pointer;
+}

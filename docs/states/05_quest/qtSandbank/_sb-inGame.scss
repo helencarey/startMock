@@ -1,0 +1,54 @@
+.sDollarBox {
+  position: relative;
+  top: $rowH * 0.75;
+  left: $colW * 10;
+  height: $rowH * 1.25;
+  width: $colW * 2;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 17;
+
+  // border: 1px solid lightBlue;
+
+  .pointsBox {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 2em;
+    // border: 1px solid lightBlue;
+
+    .points-txt {
+      color: #C7B299;
+      font-size: 1em;
+      font-weight: 600;
+    }
+  }
+
+
+  .sDollarImgBox {
+    position: relative;
+    height: $rowH;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .sDollar-img {
+    height: 76px;
+    width: $colW * 1.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .sDollar-label {
+    margin-top: 0.35em;
+    height: 20px;
+    width: 84px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+} // end .sDollarBox
