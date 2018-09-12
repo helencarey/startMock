@@ -1,0 +1,68 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.92 44.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d15443;
+      }
+
+      .cls-2 {
+        fill: #e86349;
+      }
+
+      .cls-3 {
+        fill: #993c37;
+      }
+
+      .cls-4 {
+        fill: #823a38;
+      }
+
+      .cls-5 {
+        fill: #dda243;
+      }
+
+      .cls-6 {
+        fill: #ffc95f;
+      }
+
+      .cls-7 {
+        fill: #c6944a;
+      }
+
+      .cls-8 {
+        fill: #3d6d84;
+      }
+
+      .cls-9 {
+        fill: #55a4c5;
+      }
+
+      .cls-10 {
+        fill: #4ec8d8;
+      }
+    </style>
+  </defs>
+  <title>kite-boxKite</title>
+  <g id="Layer_65" data-name="Layer 65">
+    <g>
+      <path class="cls-1" d="M44.87,44.24l-13-4.49Q33.09,32.37,34.37,25l15.37,5.13Z"/>
+      <path class="cls-2" d="M49.58,30.07,34.37,25,42.24,9.77l12.68,4.37Z"/>
+      <polygon class="cls-3" points="54.37 16 50.37 30 49.37 30 54.37 16"/>
+      <polygon class="cls-4" points="50.37 30 45.37 43 49.37 30 50.37 30"/>
+    </g>
+    <g>
+      <g>
+        <path class="cls-5" d="M27,36.24,14.83,32.05,17.2,18.29l14.33,4.78Z"/>
+        <path class="cls-6" d="M31.39,23,17.2,18.29q3.68-7.09,7.34-14.21L36.37,8.16Z"/>
+      </g>
+      <polygon class="cls-7" points="35.85 9.89 32.12 22.95 31.19 22.95 35.85 9.89"/>
+      <polygon class="cls-7" points="32.12 22.95 27.46 35.08 31.19 22.95 32.12 22.95"/>
+    </g>
+    <g>
+      <polygon class="cls-8" points="18.47 5.1 15.19 16.57 14.37 16.57 18.47 5.1"/>
+      <polygon class="cls-8" points="15.19 16.57 11.09 27.22 14.37 16.57 15.19 16.57"/>
+      <path class="cls-9" d="M10.69,28.24,0,24.56q1-6,2.08-12.08l12.59,4.2Z"/>
+      <path class="cls-10" d="M14.55,16.63,2.08,12.48,8.53,0,18.92,3.58Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="hole" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 41 13" style="enable-background:new 0 0 41 13;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E0D0BD;}
+	.st1{fill:#EDDDC3;}
+</style>
+<symbol  id="hole_1_" viewBox="-20.5 -6.5 41 13">
+	<ellipse id="bottom_1_" class="st0" cx="0" cy="0.3" rx="20.5" ry="6.2"/>
+	<ellipse id="sides_1_" class="st1" cx="0" cy="-0.9" rx="18.5" ry="5.6"/>
+</symbol>
+<use xlink:href="#hole_1_"  width="41" height="13" x="-20.5" y="-6.5" transform="matrix(1 0 0 -1 20.5 6.5)" style="overflow:visible;"/>
+</svg>

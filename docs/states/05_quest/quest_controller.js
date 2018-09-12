@@ -220,7 +220,7 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
         $scope.score += val;
         $scope.activeCoin+= 1;
         $scope.activeTrial +=1;
-        
+
         $scope.displayScore = Math.round( ($scope.score /($scope.activeTrial * 2) * 100) );
         // $scope.promptText = $scope.promptType + ' ' + $scope.currTrial;
 
