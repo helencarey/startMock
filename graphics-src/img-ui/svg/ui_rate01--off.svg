@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0f9fc;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>img-ui_rate01--off</title>
+  <g id="silverOFF">
+    <polygon id="bottom" class="cls-1" points="125 72 75.87 72 41.81 72 41.29 72 24 36 125 36 125 72"/>
+    <polygon id="top" class="cls-2" points="125 0 75.87 0 41.81 0 41.29 0 24 36 125 36 125 0"/>
+  </g>
+</svg>
