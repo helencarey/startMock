@@ -7,10 +7,10 @@
 -->
 <div ng-repeat="tab in navTabs">
     <!-- gh docs -->
-    <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/startMock/#/{{tab.link}}">
+    <!-- <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/startMock/#/{{tab.link}}"> -->
 
     <!-- local -->
-    <!-- <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/#/{{tab.link}}"> -->
+    <a class="{{ ($index !== activeTab) ? 'navTab' : 'navTab active' }}" ng-href="/#/{{tab.link}}">
 
       <div class="{{ ($index !== activeTab) ? 'navTabBg' : 'navTabBg active' }}">
         <div class="{{ ($index !== activeTab) ? 'navBgMain' : 'navBgMain active' }}">

@@ -2,7 +2,8 @@
 
 var startMock = angular.module("startMock", [
   'ngRoute',
-  'stateControllers'
+  'stateControllers',
+  'qzService'
 ]);
 
 startMock.config(['$routeProvider', function($routeProvider) {

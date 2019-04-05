@@ -1,1 +1,3 @@
-var stateControllers = angular.module('stateControllers', []);
+var stateControllers = angular.module('stateControllers', [
+  'qzService'
+]);

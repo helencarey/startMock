@@ -35,7 +35,9 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     $scope.tbMenu = function() { $scope.setup_qtState0(); }
     $scope.tbSettings = function() { $scope.setup_qtState1(); }
     $scope.tbPhoto = function() { alert('Snapshot!'); }
+
     $scope.tbStop = function() { alert('Stop & Save Session btn clicked'); }
+
     $scope.tbHelp = function() {
       alert('Help for qtState' + $scope.qtState + '-' + $scope.qtStateDesc);
     }
@@ -115,13 +117,14 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
       $scope.rateBtns = true;
       $scope.sandbank = true;
       $scope.toolbar = {
-        'menu': true,
+        'menu': false,
         'settings': true,
         'photo': false,
         'stop': true,
         'help': true
       }
       $scope.startNewQt();
+
 
     } // end setup_qtState2 (qtNoBF)
     // =====================================================
@@ -136,7 +139,7 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
       $scope.rateBtns = true;
       $scope.sandbank = true;
       $scope.toolbar = {
-        'menu': true,
+        'menu': false,
         'settings': true,
         'photo': false,
         'stop': true,
@@ -163,6 +166,10 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
 
     // QUEST IN-GAME FX (qtState2 & qtState3 only) ==============================
     $scope.startNewQt = function() {
+      $scope.tbStop = function() {
+        $scope.setup_qtState0();
+      }
+
       $scope.qtLog = {}; // data var.
       $scope.qtLog.qtType = $scope.qtType;
 

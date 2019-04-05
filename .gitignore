@@ -1,5 +1,5 @@
 .DS_Store
 .tmp
 npm-debug.log
-
+# *.css
 node_modules

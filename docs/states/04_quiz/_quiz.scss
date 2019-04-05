@@ -1,7 +1,6 @@
 .mastImg {
   position: absolute;
   top: $rowH;
-  // left: $colW * 1.8;
   left: 160px;
   width: 710px;
   height: 95px;
@@ -9,7 +8,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 6;
-  // border: 1px solid $cDebug;
+  //border: 1px solid $cDebug;
 }
 
 .gRow {
@@ -67,6 +66,45 @@
 .menuFlag.LWQzFlag {}
 
 
+
+// ----------------------------------
+// for layout in state2 & state3
+// holds promptBox & rateBtns
+// parent is .secondRow
+.qz-displayBox {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+
+  .promptBox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    margin-left: $colW;
+    padding-bottom: 1.5em;
+    align-items: center;
+    height: $rowH;
+    width: $colW * 7;
+    border-bottom: 1px solid white;
+  }
+    .promptText {
+      color: $cTxtMain;
+      font-size: 3.5em;
+      line-height: 1em;
+      // border: 1px solid blue;
+    }
+    .promptText-menu {
+      color: $cTxtMain;
+      font-size: 2em;
+      line-height: 1em;
+      padding-bottom: 1em;
+    }
+}
+
+
+
 // ===================================================
 .qz-syllFlagBox {
   position: relative;
@@ -103,7 +141,7 @@
     margin-left: $colW;
     top: 0.5em;
     height:auto;
-    width:auto;
+    width: $colW * 2;
     padding: 1em;
     border: 1px solid $cDebug;
 

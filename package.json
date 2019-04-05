@@ -6,11 +6,20 @@
     "type": "git",
     "url": ""
   },
-  "author": "",
+  "author": "hc",
+  "scripts": {
+    "start": "concurrently -k \"npm run dev\" \"npm run watch-css\" ",
+    "dev": "lite-server --baseDir=\"docs\" ",
+    "build-css": "node-sass --include-path scss ./docs/app_styles.scss ./docs/css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1",
-    "gulp-webserver": "^0.9.1"
+    "concurrently": "^4.1.0",
+    "gulp": "^4.0.0",
+    "lite-server": "^2.4.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10"
   },
   "dependencies": {}
 }

@@ -1,4 +1,3 @@
-
 **HOSTED**  
 Visual model: https://helencarey.github.io/startMock/#/
 
@@ -24,5 +23,3 @@ $ gulp
 **IMAGE REPO**
 
 As a reference, I can put the graphics as png and svg in 'graphics-src'
-
-

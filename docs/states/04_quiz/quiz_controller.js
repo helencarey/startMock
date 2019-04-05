@@ -1,10 +1,23 @@
-stateControllers.controller('QuizCtrl', ['$scope', '$http',
-  function QuizCtrl($scope, $http) {
+stateControllers.controller('QuizCtrl', ['$scope', '$http', 'QzService', function QuizCtrl($scope, $http, QzService)
+  {
+    // ---------------------------------
+    // these $http.gets would be services in a real app
+    //$scope.qzStateConfig;
+
     $http.get('./states/partials/nav/navData.json').then(function(res){
       $scope.navTabs = res.data;
     });
+
+    // ---------------------------------
+    // ---------------------------------
+    QzService.logMe();
+
     $scope.activeTab = 3;
     $scope.state = 'quiz';
+    $scope.userFlag = true;
+    $scope.rateBtns = true;
+    $scope.diaStop = false;
+
 
     //user ---------------------------------------------------
     $scope.authUser = {
@@ -13,19 +26,9 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http',
     }
 
     // persistent UI elems ----------------------------------
-    $scope.userFlag = true;
-    $scope.pgTitle = 'QUIZ MENU';
-    $scope.toolbar = {
-      'menu': true,
-      'photo': false,
-      'stop': true,
-      'help': true
-    }
-    $scope.diaStop = false;
-    $scope.rateBtns = true;
-
-    $scope.Stop = function() {
-      $scope.diaStop = true;
+    $scope.tbStop = function() {
+      //$scope.diaStop = true;
+      $scope.Menu();
     }
     $scope.closeStopDia = function() {
       $scope.diaStop = false;
@@ -34,67 +37,70 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http',
 
     // -----------------------------------------------------
     // page content ----------------------------------------
-    // qzStates = qzMenu, qzSyll, qzSW, qzLW
 
     //qzMenu: init state
     $scope.Menu = function() {
-      $scope.menu = true;   // do this better
-      $scope.syllQz = false; // do this better
-      $scope.qzSW = false;
-      $scope.LWQz = false; // do this better
-      $scope.pgTitle = 'QUIZ MENU';
-      $scope.promptText = "What would you like to test?";
-      // reset everything
-      $scope.qzScore = 0;
-      $scope.Gold = 0;
-      $scope.Silver = 0;
-      $scope.Bronze = 0;
+    $scope.qzStateConfig = QzService.init_qzMenu();
+    $scope.qzState = $scope.qzStateConfig.qzState;
+    $scope.toolbar = $scope.qzStateConfig.toolbar;
+    $scope.pgTitle = $scope.qzStateConfig.pgTitle;
+    $scope.score = $scope.qzStateConfig.score;
+
+    $scope.promptText = "What would you like to test?";
+
     }
     $scope.Menu();
 
+
     // qzSyll Quiz ---------------------------------------
     $scope.startSyllQz = function() {
-      $scope.menu = false;
-      $scope.syllQz = true;
-      $scope.pgTitle = 'SYLLABLE QUIZ';
+      $scope.qzStateConfig = QzService.init_qzSyll();;
+      $scope.qzState = $scope.qzStateConfig.qzState;
+      $scope.toolbar = $scope.qzStateConfig.toolbar;
+      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
+      $scope.score = $scope.qzStateConfig.score;
 
       $scope.qzLength = 29;
       $scope.currTrial = 0;
+
+      $scope.itemPrefix = '#syll';
       $scope.promptType = 'syll'; //temp
       $scope.promptText = $scope.promptType + ' ' +  $scope.currTrial;  //temp
 
-      $scope.qzScore = 0;
-      $scope.gold = 0;
-      $scope.silver = 0;
-      $scope.bronze = 0;
 
-      $scope.itemPrefix = '#syll';
+      console.log($scope.score);
       console.log('start syll quiz');
     }
 
+
     // qzSW Quiz ---------------------------------------
     $scope.startSWQz = function() {
-      $scope.menu = false;
-      $scope.syllQz = false; // do this better
-      $scope.LWQz = false; // do this better
-      $scope.qzSW = true;
-      console.log($scope.qzSW);
-      $scope.pgTitle = 'SHORT WORD QUIZ';
+      $scope.qzStateConfig = QzService.init_qzSW();;
+      $scope.qzState = $scope.qzStateConfig.qzState;
+      $scope.toolbar = $scope.qzStateConfig.toolbar;
+      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
 
       $scope.qzLength = 24;
+
       $scope.currTrial = 0;
       $scope.promptType = 'qzSW'; //temp
       $scope.itemPrefix = '#qzSW';
       $scope.promptText = $scope.promptType + ' ' +  $scope.currTrial;  //temp
 
-      $scope.qzScore = 0;
-      $scope.gold = 0;
-      $scope.silver = 0;
-      $scope.bronze = 0;
-
       console.log('start short word quiz')
     };
+
+    $scope.startLWQz = function() {
+      $scope.qzStateConfig = QzService.init_qzLW();
+      $scope.qzState = $scope.qzStateConfig.qzState;
+      $scope.toolbar = $scope.qzStateConfig.toolbar;
+      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
+
+      console.log('Word Quiz');
+    }
+
     //-----------------------
+    //$scope.ratingHandlers = QzService.init_qzLW()
 
     $scope.rateGold = function() {
       let eleID = $scope.itemPrefix + $scope.currTrial;
@@ -102,7 +108,7 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http',
       console.log(step);
       step.removeClass('cls-2 cls-3 dirtyWhite dirtyBlue');
       step.addClass('gold');
-      $scope.gold += 1;
+      $scope.score.gold += 1;
       $scope.update();
     }
 
@@ -124,41 +130,50 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http',
       $scope.update();
     }
 
+    $scope.rate = function(val) {
+      switch(val) {
+        case 2:
+          $scope.rateGold();
+          break;
+        case 1:
+          $scope.rateSilver();
+          break;
+        case 0:
+          $scope.rateBronze();
+          break;
+      }
+    }
+
     $scope.update = function() {
       if ($scope.currTrial < $scope.qzLength) {
-        $scope.qzScore = ($scope.gold * 2) + $scope.silver;
+        $scope.score.qzScore = ($scope.score.gold * 2) + $scope.score.silver;
         $scope.currTrial += 1;
         $scope.promptText = $scope.promptType + ' ' + $scope.currTrial;
       } else if ($scope.currTrial === $scope.qzLength) {
-        $scope.qzScore = ($scope.gold * 2) + $scope.silver;
+        $scope.score.qzScore = ($scope.score.gold * 2) + $scope.score.silver;
         $scope.currTrial += 1;
         $scope.promptText = '';
         console.log($scope.currTrial);
         //$scope.results();
       } else if ($scope.currTrial > $scope.qzLength) {
-        $scope.qzScore = 0;
-        $scope.gold = 0;
-        $scope.silver = 0;
-        $scope.bronze = 0;
-
+        $scope.score.qzScore = 0;
+        $scope.score.gold = 0;
+        $scope.score.silver = 0;
+        $scope.score.bronze = 0;
         $scope.Menu();
         // refresh svg with <use>
       }
       //push promp txt & rating to sess log
     }
 
+
     $scope.diaComplete = function() {
       $scope.qzDone = true;
-
     }
 
-    $scope.startLWQz = function() {
-      $scope.menu = false;
-      $scope.LWQz = true;
-      $scope.pgTitle = 'WORD QUIZ';
-      $scope.promptText = "word"
-      console.log('Word Quiz');
-    }
+
+
+
 
 
 

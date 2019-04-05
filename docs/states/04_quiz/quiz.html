@@ -4,9 +4,9 @@
 
     <!-- BG IMAGES -->
     <div class="img-bg img-bg_qz-BG">
-      <div ng-if="syllQz" class="qz-syllCloud"></div>
+      <!-- <div ng-if="syllQz" class="qz-syllCloud"></div> -->
     </div>
-      <!-- ng-if="qzSW" ng-include=" './states/04_quiz/partials/qzSW-svg.html' " -->
+
     <div ng-if="qzSW" class="qz-mg"
       ng-include=" './states/04_quiz/partials/qzSW-svg.html' ">
     </div>
@@ -21,36 +21,43 @@
       </div>
 
       <!-- SECOND ROW  (word prompt, rating btns)============ ---->
-      <div class="gRow secondRow">
+      <div class="gRow secondRow qz-displayBox">
+
         <div class="mastImg"></div>
+
         <div class="promptBox">
-          <div class="{{ (menu) ? 'promptText-menu' : 'promptText' }}">
+          <div class="{{ (qzState.menu) ? 'promptText-menu' : 'promptText' }}">
             {{promptText}}
           </div>
         </div>
 
-        <div ng-if="rateBtns && !menu">
+        <div ng-if="rateBtns && !qzState.menu">
           <div ng-include=" './states/partials/rateBtns.html' "></div>
         </div>
       </div> <!-- end 2nd row -->
 
       <!-- QUIZ ACTIVTY GRAPHICS ============ ---->
       <div class="gRow qz-flagBox-layout">
-        <div ng-if="menu" class="qz-flagBox">
+        <div ng-if="qzState.menu" class="qz-flagBox">
+
           <div class="menuFlag" ng-click="startSyllQz()">
             Syllable Quiz Btn
           </div>
+
           <div class="menuFlag SWQzFlag" ng-click="startSWQz()"></div>
+
           <div class="menuFlag" ng-click="startLWQz()">
             Word Quiz Btn
           </div>
         </div> <!-- end qz-menuFlagBox -->
 
-        <div ng-if="syllQz" class="qz-flagBox qz-syllFlagBox"
+        <!-- ================================ -->
+
+        <div ng-if="qzState.syll" class="qz-flagBox qz-syllFlagBox"
           ng-include=" './states/04_quiz/partials/syllQzFlags.html' ">
         </div>
 
-        <div ng-if="LWQz" class="qz-flagBox qz-LWQzFlagBox">
+        <div ng-if="qzState.qzLW" class="qz-flagBox qz-LWQzFlagBox">
           <div class="LWQzFlag">01</div>
           <div class="LWQzFlag">02</div>
           <div class="LWQzFlag">03</div>
@@ -62,18 +69,17 @@
           <div class="LWQzFlag">09</div>
           <div class="LWQzFlag">10</div>
         </div>
-
       </div> <!-- end qz-flagBox  -->
 
     </div> <!-- end pgContent -->
 
-    <div ng-if="!menu" class="qzScore">
+    <div ng-if="!qzState.menu" class="qzScore">
       <div class="qzScoreBox">
         <p>DEBUG BOX</p>
-        <p>&nbsp;score: {{qzScore}}</p>
-        <p># correct/gold: {{gold}}</p>
-        <p># silver: {{silver}}</p>
-        <p># incorrect: {{bronze}}</p>
+        <p>&nbsp;score: {{score.qzScore}}</p>
+        <p># correct/gold: {{score.gold}}</p>
+        <p># silver: {{score.silver}}</p>
+        <p># incorrect: {{score.bronze}}</p>
       </div>
     </div>
 
