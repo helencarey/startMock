@@ -12,83 +12,90 @@ qzService.factory('QzService', function()
 
   const init_qzMenu = function() {
     return {
-      "pgTitle": "QUIZ MENU",
-      "qzState": {
+      pgTitle: "QUIZ MENU",
+      promptType: " ",
+      qzLength: 0,
+      qzState: {
         "menu": true,
         "syll": false,
         "qzSW": false,
         "qzLW": false
       },
-      "toolbar": {
+      toolbar: {
         "menu": false,
         "photo": false,
         "stop": false,
         "help": true
       },
-      "score": new Score
+      score: new Score
     } // end return
   }; // end qzMenu
 
   const init_qzSyll = function() {
     return {
-      "pgTitle": "SYLLABLE QUIZ",
-      "qzState": {
+      pgTitle: "SYLLABLE QUIZ",
+      promptType: "syll",
+      qzLength: 29,
+      qzState: {
         "menu": false,
         "syll": true,
         "qzSW": false,
         "qzLW": false
       },
-      "toolbar": {
+      toolbar: {
         "menu": false,
         "photo": false,
         "stop": true,
         "help": true
       },
-      "score": new Score
+      score: new Score
     } //end return
   } // qzSyll
 
   const init_qzSW = function() {
     return {
-      "pgTitle": "SHORT WORD QUIZ",
-      "qzState": {
+      pgTitle: "SHORT WORD QUIZ",
+      promptType: "qzSW",
+      qzLength: 24,
+      qzState: {
         "menu": false,
         "syll": false,
         "qzSW": true,
         "qzLW": false
       },
-      "toolbar": {
+      toolbar: {
         "menu": false,
         "photo": false,
         "stop": true,
         "help": true
       },
-      "score": new Score
+      score: new Score
     } //end return
   }; // init_qzSW
 
   const init_qzLW = function() {
     return {
-      "pgTitle": "WORD QUIZ",
-      "qzState": {
+      pgTitle: "WORD QUIZ",
+      promptType: "qzLW",
+      qzLength: 49,
+      qzState: {
         "menu": false,
         "syll": false,
         "qzSW": false,
         "qzLW": true
       },
-      "toolbar": {
+      toolbar: {
         "menu": false,
         "photo": false,
         "stop": true,
         "help": true
       },
-      "score": new Score
+      score: new Score
     } //end return
   } // init_qzLW
 
-
-
   //resetScore:
+
   // SERVICE EXPORT ------------------------------------------
   return {
     logMe: function() { console.log('qzService works!'); },

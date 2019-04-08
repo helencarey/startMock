@@ -3,21 +3,16 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http', 'QzService', functio
     // ---------------------------------
     // these $http.gets would be services in a real app
     //$scope.qzStateConfig;
-
     $http.get('./states/partials/nav/navData.json').then(function(res){
       $scope.navTabs = res.data;
     });
 
     // ---------------------------------
-    // ---------------------------------
-    QzService.logMe();
-
     $scope.activeTab = 3;
     $scope.state = 'quiz';
     $scope.userFlag = true;
     $scope.rateBtns = true;
     $scope.diaStop = false;
-
 
     //user ---------------------------------------------------
     $scope.authUser = {
@@ -34,132 +29,124 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http', 'QzService', functio
       $scope.diaStop = false;
     }
 
-
     // -----------------------------------------------------
     // page content ----------------------------------------
 
-    //qzMenu: init state
+    // updates $scope with qzState config data from qzService
+    function initQuizState( config ) {
+      $scope.qzState = $scope.qzStateConfig.qzState;
+      $scope.toolbar = $scope.qzStateConfig.toolbar;
+      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
+      $scope.promptType = $scope.qzStateConfig.promptType;
+      $scope.qzLength = $scope.qzStateConfig.qzLength;
+      $scope.score = $scope.qzStateConfig.score; //zeros out scores
+      $scope.currTrial = 0;
+    }
+
+    //qzMenu ---------------------------------------
     $scope.Menu = function() {
-    $scope.qzStateConfig = QzService.init_qzMenu();
-    $scope.qzState = $scope.qzStateConfig.qzState;
-    $scope.toolbar = $scope.qzStateConfig.toolbar;
-    $scope.pgTitle = $scope.qzStateConfig.pgTitle;
-    $scope.score = $scope.qzStateConfig.score;
-
-    $scope.promptText = "What would you like to test?";
-
+      $scope.qzStateConfig = QzService.init_qzMenu();
+      initQuizState( $scope.qzStateConfig );
+      $scope.promptText = "What would you like to test?";
     }
     $scope.Menu();
-
 
     // qzSyll Quiz ---------------------------------------
     $scope.startSyllQz = function() {
       $scope.qzStateConfig = QzService.init_qzSyll();;
-      $scope.qzState = $scope.qzStateConfig.qzState;
-      $scope.toolbar = $scope.qzStateConfig.toolbar;
-      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
-      $scope.score = $scope.qzStateConfig.score;
+      initQuizState( $scope.qzStateConfig );
+      $scope.promptText = $scope.promptType + ' ' +  $scope.currTrial;
 
-      $scope.qzLength = 29;
-      $scope.currTrial = 0;
-
-      $scope.itemPrefix = '#syll';
-      $scope.promptType = 'syll'; //temp
-      $scope.promptText = $scope.promptType + ' ' +  $scope.currTrial;  //temp
-
-
-      console.log($scope.score);
-      console.log('start syll quiz');
+      console.log('starting Syll Quiz');
     }
-
 
     // qzSW Quiz ---------------------------------------
     $scope.startSWQz = function() {
-      $scope.qzStateConfig = QzService.init_qzSW();;
-      $scope.qzState = $scope.qzStateConfig.qzState;
-      $scope.toolbar = $scope.qzStateConfig.toolbar;
-      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
+      $scope.qzStateConfig = QzService.init_qzSW();
+      initQuizState( $scope.qzStateConfig );
+      $scope.promptText = $scope.promptType + ' ' +  $scope.currTrial;
 
-      $scope.qzLength = 24;
-
-      $scope.currTrial = 0;
-      $scope.promptType = 'qzSW'; //temp
-      $scope.itemPrefix = '#qzSW';
-      $scope.promptText = $scope.promptType + ' ' +  $scope.currTrial;  //temp
-
-      console.log('start short word quiz')
+      console.log('starting Short Word Quiz')
     };
 
     $scope.startLWQz = function() {
       $scope.qzStateConfig = QzService.init_qzLW();
-      $scope.qzState = $scope.qzStateConfig.qzState;
-      $scope.toolbar = $scope.qzStateConfig.toolbar;
-      $scope.pgTitle = $scope.qzStateConfig.pgTitle;
-
-      console.log('Word Quiz');
+      initQuizState( $scope.qzStateConfig );
+      $scope.promptText = "LWQz coming soon!";
+      console.log('starting Long Word Quiz');
     }
 
-    //-----------------------
-    //$scope.ratingHandlers = QzService.init_qzLW()
 
-    $scope.rateGold = function() {
-      let eleID = $scope.itemPrefix + $scope.currTrial;
+    // =======================================
+    //  RATING HANDLERS & GRAPHIC UPDATE
+    // =======================================
+    
+    $scope.graphicStepSelector = function(cb) {
+      let eleID = '#' + $scope.promptType + $scope.currTrial;
       let step = angular.element( document.querySelector( eleID ) );
       console.log(step);
       step.removeClass('cls-2 cls-3 dirtyWhite dirtyBlue');
+
+      cb( step ); //calls rateColor()
+    }
+    $scope.rateGold = function( step ) {
       step.addClass('gold');
       $scope.score.gold += 1;
       $scope.update();
     }
-
-    $scope.rateSilver = function() {
-      let eleID = $scope.itemPrefix + $scope.currTrial;
-      let step = angular.element( document.querySelector( eleID ) );
-      $scope.silver += 1;
-      step.removeClass('cls-2 cls-3 dirtyWhite dirtyBlue');
+    $scope.rateSilver = function( step ) {
       step.addClass('silver');
+      $scope.silver += 1;
       $scope.update();
     }
-
-    $scope.rateBronze = function() {
-      let eleID = $scope.itemPrefix + $scope.currTrial;
-      let step = angular.element( document.querySelector( eleID ) );
-      $scope.bronze += 1;
-      step.removeClass('cls-2 cls-3 dirtyWhite dirtyBlue');
+    $scope.rateBronze = function( step ) {
       step.addClass('bronze');
+      $scope.bronze += 1;
       $scope.update();
     }
 
+    // input val from rating btns
     $scope.rate = function(val) {
       switch(val) {
         case 2:
-          $scope.rateGold();
+          $scope.graphicStepSelector( $scope.rateGold );
           break;
         case 1:
-          $scope.rateSilver();
+          $scope.graphicStepSelector( $scope.rateSilver );
           break;
         case 0:
-          $scope.rateBronze();
+          $scope.graphicStepSelector( $scope.rateBronze );
           break;
       }
     }
 
+    // =======================================
+    //  UPDATE SCORE AND PROMPT OUTPUT
+    // =======================================
+    function sumQzScore() {
+      let score = ($scope.score.gold * 2) + $scope.score.silver;
+      return score
+    }
+
+    function updatePromptText() {
+      let promptText = $scope.promptType + ' ' + $scope.currTrial;
+      return promptText
+    }
+
     $scope.update = function() {
       if ($scope.currTrial < $scope.qzLength) {
-        $scope.score.qzScore = ($scope.score.gold * 2) + $scope.score.silver;
+        $scope.score.qzScore = sumQzScore();
         $scope.currTrial += 1;
-        $scope.promptText = $scope.promptType + ' ' + $scope.currTrial;
+        $scope.promptText = updatePromptText();
+
       } else if ($scope.currTrial === $scope.qzLength) {
-        $scope.score.qzScore = ($scope.score.gold * 2) + $scope.score.silver;
+        $scope.score.qzScore = sumQzScore();
         $scope.currTrial += 1;
         $scope.promptText = '';
         console.log($scope.currTrial);
         //$scope.results();
       } else if ($scope.currTrial > $scope.qzLength) {
-        $scope.score.qzScore = 0;
-        $scope.score.gold = 0;
-        $scope.score.silver = 0;
-        $scope.score.bronze = 0;
+        $scope.promptText = '';
         $scope.Menu();
         // refresh svg with <use>
       }
@@ -167,13 +154,11 @@ stateControllers.controller('QuizCtrl', ['$scope', '$http', 'QzService', functio
     }
 
 
+
+
     $scope.diaComplete = function() {
       $scope.qzDone = true;
     }
-
-
-
-
 
 
 

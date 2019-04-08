@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: flex-end;
   z-index: 10;
+  user-select: none;
   // border: 1px solid tan;
 }
 
@@ -50,14 +51,21 @@
   user-select: none;
 }
 
-#rateGold .rateBtnTxt { background-color: #ffc95f; }
+#rateGold .rateBtnTxt {
+  background-color: #ffc95f;
+  user-select: none;
+}
 
 #rateSilver .rateBtnTxt {
   background-color: #f0f9fc;
   color: #408BA2;
+  user-select: none;
 }
 
-#rateBronze .rateBtnTxt { background-color: #efbd88; }
+#rateBronze .rateBtnTxt {
+  background-color: #efbd88;
+  user-select: none; 
+}
 
 #rateGold {
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20125%2072%22%3E%3Cg%20id%3D%22goldOFF%22%3E%3Cpath%20id%3D%22bottom%22%20fill%3D%22%23ffc95f%22%20d%3D%22M125%2072H41.78L24.59%2036H125v36z%22/%3E%3Cpath%20id%3D%22top%22%20fill%3D%22%23ffd576%22%20d%3D%22M125%200H41.78L24.59%2036H125V0z%22/%3E%3C/g%3E%3C/svg%3E');

@@ -14,10 +14,14 @@ THEN:
 - uncomment line #13  
 
 ```
-$ gulp
+$ npm start
 ```
 
-(All the src code is in 'docs')  
+Build Notes:
+No build, really. All the src code is in 'docs.'
+Dev server scripts are in package.json.
+ - lite-server handles Browser-sync stuff
+ - nodemon watches and rebuilds the sass
 
 ----
 **IMAGE REPO**

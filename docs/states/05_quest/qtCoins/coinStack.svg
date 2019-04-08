@@ -1,6 +1,6 @@
 <svg id="coinStack" data-name="coinStack" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.64 65.88">
 
-  <g id="coin-0" class="coin hidden">
+  <g id="coin-0" class="coin animated hidden">
     <g class="side">
       <ellipse cx="16.32" cy="64.55" rx="16.32" ry="1.33"/>
       <rect y="60.33" width="32.64" height="4.22"/>

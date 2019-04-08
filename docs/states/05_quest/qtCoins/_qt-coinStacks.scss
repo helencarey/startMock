@@ -64,7 +64,20 @@
   // border: 2px solid lime;
 }
 
+// .coin * {
+//   // animation-duration: 3s;
+//   opacity: 1;
+//   -webkit-transition: opacity 0.25s, fill 1s;
+//   transition: opacity 0.25s, fill 1s;
+//   transition-timing-function: ease-in;
+// }
+//
+// .coin .hidden {
+//   opacity: 0;
+// }
+
 g.hidden {display: none;}
+
 .coinTop-2 { fill: #FFE592; }
 .coinSide-2 { fill: #FFC95F; }
 .coinTop-1 { fill: #ffffff; }
