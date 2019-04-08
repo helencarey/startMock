@@ -195,6 +195,11 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
     } // end startNewQt()
 
 
+    /*
+      const element =  document.querySelector('.my-element')
+      element.classList.add('animated', 'bounceOutLeft')
+    */
+
     $scope.rate = function(val) {
       // update coin
       let stackID = 'div#stack' + $scope.activeStack;
@@ -209,6 +214,8 @@ stateControllers.controller('QuestCtrl', ['$scope', '$http',
       side.addClass('coinSide-' + val);
       top.addClass('coinTop-' +  + val);
       coin.removeClass('hidden');
+      coin.addClass('animated', 'bounce');
+
       console.log(stackID + ', ' + coinID);
 
       // update score counters

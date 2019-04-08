@@ -11,8 +11,7 @@
     "start": "concurrently -k \"npm run dev\" \"npm run watch-css\" ",
     "dev": "lite-server --baseDir=\"docs\" ",
     "build-css": "node-sass --include-path scss ./docs/app_styles.scss ./docs/css/styles.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
